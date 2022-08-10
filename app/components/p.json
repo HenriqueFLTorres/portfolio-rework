@@ -1,0 +1,83 @@
+[
+  {
+    "index": 1,
+    "title": "First",
+    "github": "https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator",
+    "linkWeb": "https://mir4cc.netlify.app/",
+    "date": "03/08/22",
+    "images": [
+      "https://i.imgur.com/kFUrjL9.png",
+      "https://i.imgur.com/uUD0vMH.png",
+      "https://i.imgur.com/39rweQj.png",
+      "https://i.imgur.com/wTrHRWG.png"
+    ],
+    "description": "Taking advantage of features such as local storage and state management, React made it possible to communicate between the different components of the page using its resources, facilitating the implementation of features such as themes, filters, and languages.",
+    "technologies": ["HTML", "CSS", "REACT", "🧠"],
+    "changelog": "A cool change this morning \n lets fix it right now"
+  },
+  {
+    "index": 2,
+    "title": "Second",
+    "github": "https://github.com/HenriqueFLTorres/portfolio",
+    "linkWeb": "https://htportfolio.vercel.app/en",
+    "date": "03/17/22",
+    "images": [
+      "https://i.imgur.com/trGBc5E.png",
+      "https://i.imgur.com/Z84eL4b.png",
+      "https://i.imgur.com/1o1ZJVq.png",
+      "https://media0.giphy.com/media/gVkQmYGazJKap17Aft/giphy.gif?cid=790b761197a16f81c5a29dfb6fda692f923994c8cf71c482&rid=giphy.gif&ct=g"
+    ],
+    "description": "Using React and Next.js, it was to develop a multiple language website for different types of devices with flexible code by using a responsive layout with a clean architecture and reusable components.",
+    "technologies": ["HTML", "CSS", "REACT", "NextJS"]
+  },
+  {
+    "index": 3,
+    "title": "Third",
+    "github": "https://github.com/HenriqueFLTorres/EzEcommerce-FakeWebsite",
+    "linkWeb": "https://ezecommerce.vercel.app/",
+    "date": "03/29/22",
+    "images": [
+      "https://i.imgur.com/CmiX6g9.png",
+      "https://i.imgur.com/w6txGeD.png",
+      "https://i.imgur.com/UKmxlS4.png",
+      "https://i.imgur.com/17ODvzt.png",
+      "https://i.imgur.com/81JNzle.png",
+      "https://i.imgur.com/Pth8tLW.png"
+    ],
+    "description": " routing and state management features were possible to accomplish the connection between multiple components and data.",
+    "technologies": ["HTML", "CSS", "REACT", "NextJS"]
+  },
+  {
+    "index": 4,
+    "title": "Fourth",
+    "github": "https://github.com/HenriqueFLTorres/EzEcommerce-FakeWebsite",
+    "linkWeb": "https://ezecommerce.vercel.app/",
+    "date": "03/29/22",
+    "images": [
+      "https://i.imgur.com/CmiX6g9.png",
+      "https://i.imgur.com/w6txGeD.png",
+      "https://i.imgur.com/UKmxlS4.png",
+      "https://i.imgur.com/17ODvzt.png",
+      "https://i.imgur.com/81JNzle.png",
+      "https://i.imgur.com/Pth8tLW.png"
+    ],
+    "description": "As required for an e-commerce site, multiple pages and components communicating with each other were necessary, making React and Next.js a perfect match. Leveraging routing and state management features were possible to accomplish the connection between multiple components and data.",
+    "technologies": ["HTML", "CSS", "REACT", "NextJS"]
+  },
+  {
+    "index": 5,
+    "title": "Fifth",
+    "github": "https://github.com/HenriqueFLTorres/twitch-clone",
+    "linkWeb": "https://clonetwitch.vercel.app/",
+    "date": "04/19/22",
+    "images": [
+      "https://i.imgur.com/C5pEo41.png",
+      "https://i.imgur.com/qKn7D3T.png",
+      "https://i.imgur.com/meyf8ql.png",
+      "https://i.imgur.com/N6aA2py.png",
+      "https://i.imgur.com/GJZdhXq.png"
+    ],
+    "description": "For good fidelity, was necessary good CSS and debugging skills, and with the help of SCSS and Chrome Dev Tools, I could replicate it with good precision and even learn how a big website is developed.",
+    "technologies": ["HTML", "CSS", "SCSS", "REACT", "NextJS"]
+  }
+]
