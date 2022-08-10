@@ -1,26 +1,27 @@
 import React, { createContext, useContext, useState } from 'react'
 
-export const isLanguageEnglish = createContext<boolean | null>(true);
-export const isLanguageEnglishUpdate = createContext<React.SetStateAction<boolean>>(true);
+interface LanguageStateProps {
+  state: boolean
+  setState: React.Dispatch<boolean>
+}
+
+export const isLanguageEnglish = createContext<LanguageStateProps | null>(null);
 
 
 export function useEnglishLanguage() {
   return useContext(isLanguageEnglish)
 }
-
-export function useEnglishLanguageUpdate() {
-  return useContext(isLanguageEnglishUpdate)
-}
-
-
 export function LanguageContext({children}: any) {
   const [isEnglishLanguage, setIsEnglishLanguage] = useState(true);
 
+  const LanguageState: LanguageStateProps = {
+    state: isEnglishLanguage,
+    setState: setIsEnglishLanguage
+  };
+
   return (
-    <isLanguageEnglish.Provider value={isEnglishLanguage}>
-      <isLanguageEnglishUpdate.Provider value={setIsEnglishLanguage}>
+    <isLanguageEnglish.Provider value={LanguageState}>
         {children}
-      </isLanguageEnglishUpdate.Provider>
     </isLanguageEnglish.Provider>
   );
 }

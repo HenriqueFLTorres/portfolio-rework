@@ -586,8 +586,8 @@ video {
   top: -24rem;
 }
 
-.right-\[-22rem\] {
-  right: -22rem;
+.right-\[-24rem\] {
+  right: -24rem;
 }
 
 .-bottom-\[5rem\] {
@@ -608,14 +608,6 @@ video {
 
 .top-12 {
   top: 3rem;
-}
-
-.right-\[-15rem\] {
-  right: -15rem;
-}
-
-.right-\[-24rem\] {
-  right: -24rem;
 }
 
 .-z-10 {
@@ -1064,6 +1056,16 @@ video {
           animation: opacity 6s infinite alternate;
 }
 
+.animate-\[reveal_1\.5s_ease-out_2s_forwards\] {
+  -webkit-animation: reveal 1.5s ease-out 2s forwards;
+          animation: reveal 1.5s ease-out 2s forwards;
+}
+
+.animate-\[reveal_1\.5s_ease-out_2\.5s_forwards\] {
+  -webkit-animation: reveal 1.5s ease-out 2.5s forwards;
+          animation: reveal 1.5s ease-out 2.5s forwards;
+}
+
 @-webkit-keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
@@ -1110,46 +1112,6 @@ video {
 .animate-\[reveal_1s_ease-out_1\.5s_forwards\] {
   -webkit-animation: reveal 1s ease-out 1.5s forwards;
           animation: reveal 1s ease-out 1.5s forwards;
-}
-
-.animate-\[appear_1s_ease-out_forwards_\] {
-  -webkit-animation: appear 1s ease-out forwards;
-          animation: appear 1s ease-out forwards;
-}
-
-.animate-\[appear_1s_ease-out_forwards\] {
-  -webkit-animation: appear 1s ease-out forwards;
-          animation: appear 1s ease-out forwards;
-}
-
-.animate-\[reveal_1s_ease-out_forwards\] {
-  -webkit-animation: reveal 1s ease-out forwards;
-          animation: reveal 1s ease-out forwards;
-}
-
-.animate-\[reveal_1s_ease-out_2s_forwards\] {
-  -webkit-animation: reveal 1s ease-out 2s forwards;
-          animation: reveal 1s ease-out 2s forwards;
-}
-
-.animate-\[reveal_1s_ease-out_3s_forwards\] {
-  -webkit-animation: reveal 1s ease-out 3s forwards;
-          animation: reveal 1s ease-out 3s forwards;
-}
-
-.animate-\[reveal_1\.5s_ease-out_3s_forwards\] {
-  -webkit-animation: reveal 1.5s ease-out 3s forwards;
-          animation: reveal 1.5s ease-out 3s forwards;
-}
-
-.animate-\[reveal_1\.5s_ease-out_2\.5s_forwards\] {
-  -webkit-animation: reveal 1.5s ease-out 2.5s forwards;
-          animation: reveal 1.5s ease-out 2.5s forwards;
-}
-
-.animate-\[reveal_1\.5s_ease-out_2s_forwards\] {
-  -webkit-animation: reveal 1.5s ease-out 2s forwards;
-          animation: reveal 1.5s ease-out 2s forwards;
 }
 
 .cursor-pointer {

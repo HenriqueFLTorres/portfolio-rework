@@ -1,11 +1,8 @@
 import React from "react";
 import {
-  useEnglishLanguage,
-  useEnglishLanguageUpdate,
+  useEnglishLanguage
 } from "~/hooks/LanguageContext";
 import Logo from "public/Icons/Logo";
-
-type Props = {};
 
 const navItemsEN = [
   {
@@ -47,13 +44,13 @@ const navItemsPT = [
   },
 ];
 
-const Navbar = (props: Props) => {
-  const isLanguageEnglish = useEnglishLanguage();
-  const setLanguageEnglish = useEnglishLanguageUpdate();
+const Navbar = () => {
+  const {state: isEnglish, setState: setIsEnglish} = useEnglishLanguage()!;
+  
 
   // return an array accoarding to language
   const getNavItems = () => {
-    if (!isLanguageEnglish) {
+    if (!isEnglish) {
       return navItemsPT;
     } else {
       return navItemsEN;
@@ -81,24 +78,24 @@ const Navbar = (props: Props) => {
         <div className="flex font-bold select-none">
           <span
             className={`mx-4 cursor-pointer ${
-              !isLanguageEnglish && "text-primary"
+              !isEnglish && "text-primary"
             } transition-colors duration-300`}
-            onClick={() => setLanguageEnglish(false)}
+            onClick={() => setIsEnglish(false)}
           >
             PT
           </span>
           <span
             className={`mx-4 cursor-pointer ${
-              isLanguageEnglish && "text-primary"
+              isEnglish && "text-primary"
             } transition-colors duration-300`}
-            onClick={() => setLanguageEnglish(true)}
+            onClick={() => setIsEnglish(true)}
           >
             EN
           </span>
         </div>
         <span
           className={`flex w-10 h-1 rounded-full bg-primary ${
-            isLanguageEnglish
+            isEnglish
               ? "translate-x-[1.65rem]"
               : "translate-x-[-1.65rem]"
           } transition-transform duration-300`}

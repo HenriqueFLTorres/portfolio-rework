@@ -7,39 +7,43 @@ import SocialLinks from "~/components/contact/SocialLinks";
 import Introduction from "~/components/Home/Introduction";
 import Navbar from "~/components/Navbar";
 
-import * as mir4 from '~/routes/project/mir4cc.mdx'
+import * as mir4 from "~/routes/project/mir4cc.mdx";
 
 import { LanguageContext } from "~/hooks/LanguageContext";
 import { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
 const getProjectFromModule = (mod: any) => {
-  return { ...mod.attributes }
-}
+  return { ...mod.attributes };
+};
 
 export const loader: LoaderFunction = async () => {
-  return [getProjectFromModule(mir4), getProjectFromModule(mir4), getProjectFromModule(mir4), getProjectFromModule(mir4), getProjectFromModule(mir4)]
+  return [
+    getProjectFromModule(mir4),
+    getProjectFromModule(mir4),
+    getProjectFromModule(mir4),
+    getProjectFromModule(mir4),
+    getProjectFromModule(mir4),
+  ];
 };
 
 export default function Index() {
-  const data = useLoaderData()
-  
+  const data = useLoaderData();
+
   return (
-    <>
-      <LanguageContext>
-        <Background />
-        <Navbar />
+    <LanguageContext>
+      <Background />
+      <Navbar />
 
-        <Introduction />
+      <Introduction />
 
-        <AboutMe />
+      <AboutMe />
 
-        <Technologies />
+      <Technologies />
 
-        <ProjectsSection projects={data} />
+      <ProjectsSection projects={data} />
 
-        <SocialLinks />
-      </LanguageContext>
-    </>
+      <SocialLinks />
+    </LanguageContext>
   );
 }
