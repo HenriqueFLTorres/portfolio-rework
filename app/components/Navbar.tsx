@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  isLanguageEnglish,
   useEnglishLanguage
 } from "~/hooks/LanguageContext";
 import Logo from "public/Icons/Logo";
@@ -45,8 +46,8 @@ const navItemsPT = [
 ];
 
 const Navbar = () => {
-  const {state: isEnglish, setState: setIsEnglish} = useEnglishLanguage()!;
-  
+  const languageHook = useEnglishLanguage()!;
+  const {state: isEnglish, setState: setIsEnglish} = isLanguageEnglish
 
   // return an array accoarding to language
   const getNavItems = () => {
@@ -58,7 +59,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="xl:flex z-50 w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]">
+    <nav className="relative z-50 xl:flex z-50 w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]">
       <a href="/">
         <Logo className="h-12 w-12" />
       </a>

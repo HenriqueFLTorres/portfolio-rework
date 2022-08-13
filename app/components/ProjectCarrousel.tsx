@@ -34,12 +34,12 @@ const ProjectCarrousel = ({ images }: Props) => {
           <img
             src={image}
             alt=""
-            className="absolute w-full h-full blur-[5px] md:blur-[10px]"
+            className="absolute w-full h-full blur-[5px] md:blur-[10px] rounded"
           />
           <img
             src={image}
             alt=""
-            className="absolute w-full h-full object-contain"
+            className="absolute w-full h-full object-contain rounded"
           />
         </div>
       ))}

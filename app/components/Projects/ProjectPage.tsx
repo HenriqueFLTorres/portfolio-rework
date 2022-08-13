@@ -2,12 +2,12 @@ import Background from "~/components/Background";
 import Navbar from "~/components/Navbar";
 import ProjectCarrousel from "~/components/ProjectCarrousel";
 
-import GreenParticle from "public/SVG/GreenParticle.svg";
-import RedParticle from "public/SVG/RedParticle.svg";
-import PurpleParticle from "public/SVG/PurpleParticle.svg";
+import GreenParticle from "public/SVG/GreenParticle.png";
+import RedParticle from "public/SVG/RedParticle.png";
+import PurpleParticle from "public/SVG/PurpleParticle.png";
 
 import GitHub from "public/linksIcons/GitHub";
-import Link from "public/Icons/Link";
+import LinkIcon from "public/Icons/Link";
 
 import HandWriting from "public/Emojis/HandWriting.png";
 import BuildingConstruction from "public/Emojis/BuildingConstruction.png";
@@ -40,35 +40,27 @@ export default function ProjectPage({
   learned,
 }: Props) {
   return (
-    <div className="h-[1800px]">
-      <div className="absolute w-[1920px] 2xl:w-screen h-auto -z-10 -translate-y-24 overflow-hidden">
+    <div className="h-[1900px] relative overflow-hidden -translate-y-24">
+      <div className="absolute flex flex-col items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-50 blur-md">
+        <img src={images[0]} alt="" className="absolute w-full h-auto" />
         <img
           src={images[0]}
           alt=""
-          className="absolute opacity-40 blur-md 2xl:w-full 2xl:h-[1080px] 2xl:blur-xl"
-        />
-        <img
-          src={images[0]}
-          alt=""
-          className="absolute opacity-40 blur-md translate-y-full 2xl:w-full 2xl:h-[1080px] 2xl:blur-xl"
+          className="absolute w-full h-auto translate-y-full"
         />
       </div>
-      <img
-        src={RedParticle}
-        alt=""
-        className="absolute -z-10 translate-y-[600px] md:translate-y-0 h-[800px] md:h-[1600px] overflow-hidden"
-      />
+      <img src={RedParticle} alt="" className="absolute left-[-50rem] top-30" />
       <img
         src={GreenParticle}
         alt=""
-        className="absolute -z-10 right-0 h-[1000px] md:h-auto -translate-y-36"
+        className="absolute right-[-12rem] top-0"
       />
       <img
         src={PurpleParticle}
         alt=""
-        className="absolute -z-10 h-[600px] scale-[2] -translate-x-1/2 md:scale-100 md:h-[1500px] translate-y-[1400px] md:translate-y-[600px] md:translate-x-[400px] overflow-hidden"
+        className="absolute left-[12rem] top-[50rem]"
       />
-      <main className="pt-20 md:pt-44 w-screen md:w-[800px] mx-auto">
+      <main className="relative z-10 pt-20 md:pt-44 w-screen md:w-[800px] mx-auto">
         <header className="flex flex-col w-screen p-4 md:w-full md:p-0">
           <div className="flex flex-col md:flex-row items-center mb-8 md:mb-12 gap-6 md:gap-0">
             <h1 className="text-primary font-bold md:mr-auto text-2xl md:text-3xl">
@@ -80,13 +72,13 @@ export default function ProjectPage({
             </div>
             <div className="hidden md:block group w-8 cursor-pointer ml-8">
               <span className="absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
-              <Link className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
+              <LinkIcon className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
             </div>
           </div>
           <div className="flex flex-col w-full md:w-auto md:flex-row gap-10 md:gap-20">
             <div className="flex flex-col h-auto w-full md:w-3/5 gap-10">
               <img
-                src="https://i.imgur.com/kFUrjL9.png"
+                src={images[0]}
                 alt=""
                 className="w-full h-auto rounded-lg"
               />
@@ -108,7 +100,7 @@ export default function ProjectPage({
                 </div>
                 <div className="block md:hidden group w-6 cursor-pointer">
                   <span className="absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
-                  <Link className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
+                  <LinkIcon className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
                 </div>
               </div>
             </div>
