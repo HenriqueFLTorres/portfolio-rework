@@ -1,7 +1,6 @@
 import React from "react";
 import ProjectCard from "~/components/Projects/ProjectCard";
 
-import Desktop from "public/Emojis/Desktop.png";
 import Arrow from "public/Icons/Arrow";
 import list from "~/components/p.json";
 

@@ -3,9 +3,7 @@ import React from "react";
 import Logo from "public/Icons/Logo";
 import ScrollDown from "../ScrollDown";
 
-type Props = {};
-
-const Introduction = (props: Props) => {
+const Introduction = () => {
   return (
     <div className="flex flex-col items-center text-primary font-display text-2xl xl:text-4xl h-screen">
       <ScrollDown />

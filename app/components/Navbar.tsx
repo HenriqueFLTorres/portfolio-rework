@@ -41,7 +41,7 @@ const navItemsPT = [
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ animate = false }: { animate?: boolean}) => {
   const [isEnglish, setIsEnglish] = useEnglishLanguage()!;
 
   console.log(useEnglishLanguage());
@@ -57,7 +57,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-50 xl:flex w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]">
+    <nav className={`absolute z-50 xl:flex w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold${animate ? "opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]" : ""}`}>
       <a href="/">
         <Logo className="h-12 w-12" />
       </a>

@@ -6,10 +6,8 @@ import CrystalBall from "public/Emojis/CrystalBall.png";
 import HandWriting from "public/Emojis/HandWriting.png";
 import HandPointingRight from "public/Emojis/HandPointingRight.png";
 
-type Props = {};
-
-const AboutMe = (props: Props) => {
-  const [isEnglish, setIsEnglish] = useEnglishLanguage()!;
+const AboutMe = () => {
+  const [isEnglish] = useEnglishLanguage()!;
 
   return (
     <div

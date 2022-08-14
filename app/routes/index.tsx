@@ -33,7 +33,7 @@ export default function Index() {
   return (
     <LanguageContext>
       <Background />
-      <Navbar />
+      <Navbar animate={true} />
 
       <Introduction />
 

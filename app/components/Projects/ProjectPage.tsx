@@ -1,6 +1,5 @@
-import Background from "~/components/Background";
-import Navbar from "~/components/Navbar";
 import ProjectCarrousel from "~/components/ProjectCarrousel";
+import { useEnglishLanguage } from "~/hooks/LanguageContext";
 
 import GreenParticle from "public/SVG/GreenParticle.png";
 import RedParticle from "public/SVG/RedParticle.png";
@@ -39,8 +38,10 @@ export default function ProjectPage({
   challenges,
   learned,
 }: Props) {
+  const [isEnglish] = useEnglishLanguage()!;
+
   return (
-    <div className="h-[1900px] relative overflow-hidden -translate-y-24">
+    <div className="h-[1800px] relative overflow-hidden">
       <div className="absolute flex flex-col items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-50 blur-md">
         <img src={images[0]} alt="" className="absolute w-full h-auto" />
         <img
@@ -110,7 +111,7 @@ export default function ProjectPage({
           <div>
             <span className="flex flex-row items-center font-bold text-xl text-primary mb-4 md:mb-12 p-4">
               <img src={HandWriting} alt="" className="h-12 mr-6 inline" />
-              <h3>About the project</h3>
+              <h3>{ isEnglish ? "About the project" : "Sobre o projeto" }</h3>
             </span>
             <p className="text-primary font-light text-sm">{about}</p>
           </div>
@@ -122,7 +123,7 @@ export default function ProjectPage({
                 alt=""
                 className="h-12 mr-6 inline"
               />
-              <h3>Build with</h3>
+              <h3>{ isEnglish ? "Build with" : "Desenvolvido com" }</h3>
             </span>
             <p className="text-primary font-light text-sm">{buildWith}</p>
           </div>
@@ -130,7 +131,7 @@ export default function ProjectPage({
           <div>
             <span className="flex flex-row items-center font-bold text-xl text-primary mb-4 md:mb-12 p-4">
               <img src={Mountain} alt="" className="h-12 mr-6 inline" />
-              <h3>The challenges</h3>
+              <h3>{ isEnglish ? "The challenges" : "Os desafios" }</h3>
             </span>
             <p className="text-primary font-light text-sm">{challenges}</p>
           </div>
@@ -138,7 +139,7 @@ export default function ProjectPage({
           <div>
             <span className="flex flex-row items-center font-bold text-xl text-primary  mb-12 p-4">
               <img src={Brain} alt="" className="h-12 mr-6 inline" />
-              <h3>What I've learned</h3>
+              <h3>{ isEnglish ? "What I've learned" : "Oque eu aprendi" }</h3>
             </span>
             <p className="text-primary font-light text-sm">{learned}</p>
           </div>
