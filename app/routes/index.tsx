@@ -10,7 +10,7 @@ import Navbar from "~/components/Navbar";
 import * as mir4 from "~/routes/project/mir4cc.mdx";
 
 import { LanguageContext } from "~/hooks/LanguageContext";
-import { LoaderFunction } from "@remix-run/node";
+import type { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 
 const getProjectFromModule = (mod: any) => {

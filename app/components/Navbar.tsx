@@ -1,5 +1,4 @@
-import React from "react";
-import { isLanguageEnglish, useEnglishLanguage } from "~/hooks/LanguageContext";
+import { useEnglishLanguage } from "~/hooks/LanguageContext";
 import Logo from "public/Icons/Logo";
 
 const navItemsEN = [
@@ -44,6 +43,9 @@ const navItemsPT = [
 
 const Navbar = () => {
   const [isEnglish, setIsEnglish] = useEnglishLanguage()!;
+
+  console.log(useEnglishLanguage());
+  
 
   // return an array accoarding to language
   const getNavItems = () => {

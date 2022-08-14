@@ -21,7 +21,6 @@ const ProjectCard = ({
   title,
   date,
   github,
-  link,
   order,
   index,
   orderLimit,

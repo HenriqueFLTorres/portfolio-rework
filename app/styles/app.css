@@ -1031,9 +1031,9 @@ video {
   transform: translate3d(var(--tw-translate-x), var(--tw-translate-y), 0) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.animate-\[opacity_8gs_infinite_alternate\] {
-  -webkit-animation: opacity 8gs infinite alternate;
-          animation: opacity 8gs infinite alternate;
+.animate-\[opacity_8s_infinite_alternate\] {
+  -webkit-animation: opacity 8s infinite alternate;
+          animation: opacity 8s infinite alternate;
 }
 
 .animate-\[opacity_12s_infinite_alternate\] {
@@ -1102,11 +1102,6 @@ video {
 .animate-\[reveal_1s_ease-out_1\.5s_forwards\] {
   -webkit-animation: reveal 1s ease-out 1.5s forwards;
           animation: reveal 1s ease-out 1.5s forwards;
-}
-
-.animate-\[opacity_8s_infinite_alternate\] {
-  -webkit-animation: opacity 8s infinite alternate;
-          animation: opacity 8s infinite alternate;
 }
 
 .cursor-pointer {
@@ -1512,10 +1507,6 @@ video {
 
 .drop-shadow-\[0_0_4px_\#ffffffae\] {
   --tw-drop-shadow: drop-shadow(0 0 4px #ffffffae);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
