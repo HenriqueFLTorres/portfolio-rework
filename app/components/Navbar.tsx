@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  isLanguageEnglish,
-  useEnglishLanguage
-} from "~/hooks/LanguageContext";
+import { isLanguageEnglish, useEnglishLanguage } from "~/hooks/LanguageContext";
 import Logo from "public/Icons/Logo";
 
 const navItemsEN = [
@@ -46,8 +43,7 @@ const navItemsPT = [
 ];
 
 const Navbar = () => {
-  const languageHook = useEnglishLanguage()!;
-  const {state: isEnglish, setState: setIsEnglish} = isLanguageEnglish
+  const [isEnglish, setIsEnglish] = useEnglishLanguage()!;
 
   // return an array accoarding to language
   const getNavItems = () => {
@@ -59,7 +55,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="relative z-50 xl:flex z-50 w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]">
+    <nav className="relative z-50 xl:flex w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]">
       <a href="/">
         <Logo className="h-12 w-12" />
       </a>
@@ -96,9 +92,7 @@ const Navbar = () => {
         </div>
         <span
           className={`flex w-10 h-1 rounded-full bg-primary ${
-            isEnglish
-              ? "translate-x-[1.65rem]"
-              : "translate-x-[-1.65rem]"
+            isEnglish ? "translate-x-[1.65rem]" : "translate-x-[-1.65rem]"
           } transition-transform duration-300`}
         ></span>
       </div>

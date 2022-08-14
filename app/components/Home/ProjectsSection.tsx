@@ -12,7 +12,7 @@ let orderLimit = list.length - 1;
 const ProjectsSection = ({ projects }: any) => {
   const [order, setOrder] = React.useState<any>(0);
 
-  const isLanguageEnglish = useEnglishLanguage();
+  const [isEnglish] = useEnglishLanguage()!;
 
   const checkOrder = (givenNumber: Number) => {
     if (givenNumber < 0) {
@@ -29,9 +29,11 @@ const ProjectsSection = ({ projects }: any) => {
       id="projects"
       className="flex flex-col items-center mb-16 mt-32 xl:mt-60 h-[600px] xl:w-[1400px] xl:mx-auto scroll-mt-24"
     >
-      {/* <h3 className="flex flex-row justify-center font-bold text-3xl xl:text-5xl xl:mb-6 text-primary p-4">
-        <p>{ isLanguageEnglish ? "Some of my projects!" : "Alguns dos meus projetos!" }</p>
-      </h3> */}
+      <h3 className="flex flex-row justify-center font-bold text-3xl xl:text-5xl xl:mb-6 text-primary p-4">
+        <p>
+          {isEnglish ? "Some of my projects!" : "Alguns dos meus projetos!"}
+        </p>
+      </h3>
       <div className="flex flex-row justify-between items-center w-full h-full px-4 overflow-hidden">
         <Arrow
           onClick={() => setOrder(checkOrder(order - 1))}

@@ -23,7 +23,7 @@ const Background = (props: any) => {
       <img
         src={CircleParticle}
         alt=""
-        className={`absolute w-[500px] xl:w-[1000px] left-[-12rem] -bottom-[19rem] -rotate-[90deg] blur-[20px] animate-[opacity_8gs_infinite_alternate]`}
+        className={`absolute w-[500px] xl:w-[1000px] left-[-12rem] -bottom-[19rem] -rotate-[90deg] blur-[20px] animate-[opacity_8s_infinite_alternate]`}
         style={{
           transform: `translateY(-${scrollPosition * 0.02}px)`
         }}

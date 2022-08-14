@@ -5,7 +5,7 @@ import Arrow from "public/Icons/Arrow";
 import { useEnglishLanguage } from "~/hooks/LanguageContext";
 
 const ScrollDown = () => {
-  const isLanguageEnglish = useEnglishLanguage();
+  const [isEnglish, setIsEnglish] = useEnglishLanguage()!;
 
   return (
     <div className="absolute flex flex-col w-24 right-0 justify-center items-center text-primary mr-8 pt-28 opacity-0 animate-[reveal_1.5s_ease-out_2.5s_forwards]">
@@ -13,7 +13,7 @@ const ScrollDown = () => {
         <Arrow className="stroke-terciary" />
       </div>
       <p className="text-xs">
-        {isLanguageEnglish ? "Scroll Down!" : "Desça a página"}
+        {isEnglish ? "Scroll Down!" : "Desça a página"}
       </p>
     </div>
   );

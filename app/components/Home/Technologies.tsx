@@ -37,7 +37,7 @@ const technologiesIcons = [
 const Technologies = () => {
   const [iconHover, setIconHover] = React.useState<string>("");
 
-  const isLanguageEnglish = useEnglishLanguage();
+  const [isEnglish] = useEnglishLanguage()!;
 
   return (
     <div className="xl:w-[1200px] xl:mx-auto">
@@ -48,7 +48,7 @@ const Technologies = () => {
           className="h-8 xl:h-12 mr-4 xl:mr-8 inline"
         />
         <p>
-          {isLanguageEnglish
+          {isEnglish
             ? "Technologies that i use!"
             : "Tecnologias que eu uso!"}
         </p>
