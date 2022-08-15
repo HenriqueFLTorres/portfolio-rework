@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "@remix-run/react";
 
 import LinkIcon from "public/Icons/Link";
@@ -28,11 +28,15 @@ const ProjectCard = ({
   title,
   date,
   github,
+  images,
   order,
   stackUsed,
   index,
   orderLimit,
 }: Props) => {
+  const [imageRotation, setImageRotation] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+
   const TechnologiesNames = {
     CSS: CSS,
     React: ReactIcon,
@@ -57,16 +61,51 @@ const ProjectCard = ({
     }
   };
 
+  const verifyRotation = (rotation: number) => {
+    if (rotation > images.length - 1) return 0;
+    else return rotation;
+  };
+
+  useEffect(() => {
+    if (isHovering) {
+      let timer = setTimeout(
+        () => setImageRotation((prev) => verifyRotation(prev + 1)),
+        1500
+      );
+
+      return () => {
+        clearTimeout(timer);
+      };
+    }
+  });
+
   return (
     <div
       className={`absolute w-64 h-56 bg-neutral-700/70 rounded ${getPositionStyle(
-        index - 1
-      )} transition-all duration-300 z-20`}
+        index
+      )} hover:bg-neutral-600/70 transition-all duration-300 z-20`}
+      onMouseOver={() => setIsHovering(true)}
+      onMouseLeave={() => {
+        setIsHovering(false)
+        setImageRotation(0)
+      }}
     >
       <Link to="/project/mir4cc" target={"_blank"}>
         <div className="w-full h-full p-2 cursor-pointer">
-          <div className={`h-1/2 rounded bg-neutral-900 text-2xl text-primary`}>
-            pos: {index}
+          <div
+            className={`flex items-center justify-center relative h-1/2 rounded bg-neutral-900 text-2xl text-primary`}
+          >
+            {/* pos: {index} */}
+            <img
+              src={images[imageRotation]}
+              alt=""
+              className="relative z-10 object-contain h-full"
+            />
+            <img
+              src={images[imageRotation]}
+              alt=""
+              className="absolute object-contain h-full blur-[10px]"
+            />
           </div>
           <div className="flex flex-col justify-between items-center pt-2 px-2 h-1/2 ">
             <header className="flex flex-row justify-between items-center w-full">
@@ -83,7 +122,10 @@ const ProjectCard = ({
 
                 return (
                   <span className="relative w-5 h-5">
-                    <Component key={technology} className="absolute w-full h-full" />
+                    <Component
+                      key={technology}
+                      className="absolute w-full h-full"
+                    />
                     <span className="block absolute w-full h-full bg-primary/60 rounded-full blur-[15px]"></span>
                   </span>
                 );

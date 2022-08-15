@@ -13,14 +13,14 @@
     transition: transform 300ms ease, opacity 300ms ease;
   }
 
-  .test {
-    /* image-rendering: pixelated; */
-    image-rendering: crisp-edges;
-  }
-
   .right {
     opacity: 1;
     transform: translateX(150%);
+    transition: transform 300ms ease, opacity 300ms ease;
+  }
+
+  .center {
+    transform: translateY(20%);
     transition: transform 300ms ease, opacity 300ms ease;
   }
 

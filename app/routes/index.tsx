@@ -29,7 +29,7 @@ export const loader: LoaderFunction = async () => {
 
 export default function Index() {
   const data = useLoaderData();
-  
+    
   return (
     <LanguageContext>
       <Background />

@@ -15,6 +15,7 @@ export interface ProjectProps {
   date: string
   "short-description": string
   technologies: Array<string>
+  images: Array<string>
 }
 
 const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
@@ -42,7 +43,7 @@ const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
           {isEnglish ? "Some of my projects!" : "Alguns dos meus projetos!"}
         </p>
       </h3>
-      <div className="flex flex-row justify-between items-center w-full h-full px-4 overflow-hidden">
+      <div className="flex flex-row justify-between items-center w-full h-full px-4">
         <Arrow
           onClick={() => setOrder(checkOrder(order - 1))}
           className="w-12 h-12 my-auto -order-10 z-50 stroke-primary rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]"
@@ -57,6 +58,7 @@ const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
               title={item.title}
               date={item.date}
               stackUsed={item.technologies}
+              images={item.images}
               // github={item['github-link']}
               // link={item['live-link']}
             />
