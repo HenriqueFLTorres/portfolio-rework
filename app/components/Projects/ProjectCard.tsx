@@ -3,28 +3,41 @@ import { Link } from "@remix-run/react";
 
 import LinkIcon from "public/Icons/Link";
 import GitHub from "public/linksIcons/GitHub";
+
 import ReactIcon from "public/technologies/ReactIcon";
+import CSS from "public/technologies/CSS";
 
 type Props = {
-  title?: any;
-  date?: String;
-  shortDescription?: String;
-  stackUsed?: Array<String>;
+  title?: string;
+  date?: string;
+  shortDescription?: string;
+  stackUsed?: Array<keyof typeof TechnologyName>;
   github?: string;
   LinkIcon?: string;
-  order: any;
-  index: any;
-  orderLimit: any;
+  order: number;
+  index: number;
+  orderLimit: number;
 };
+
+export enum TechnologyName {
+  "CSS",
+  "React",
+}
 
 const ProjectCard = ({
   title,
   date,
   github,
   order,
+  stackUsed,
   index,
   orderLimit,
 }: Props) => {
+  const TechnologiesNames = {
+    CSS: CSS,
+    React: ReactIcon,
+  };
+
   // get style accoarding to the position of the carrousel
   const getPositionStyle = (cardPosition: Number) => {
     if (cardPosition === order) {
@@ -64,9 +77,17 @@ const ProjectCard = ({
               Taking advantage of features such as local storage and state
               management...
             </p>
-            <footer>
-              <span className="block absolute w-5 h-5 bg-primary/60 rounded-full blur-[15px]"></span>
-              <ReactIcon className="w-5 h-5" />
+            <footer className="flex flex-row gap-6">
+              {stackUsed?.map((technology: keyof typeof TechnologyName) => {
+                let Component = TechnologiesNames[technology];
+
+                return (
+                  <span className="relative w-5 h-5">
+                    <Component key={technology} className="absolute w-full h-full" />
+                    <span className="block absolute w-full h-full bg-primary/60 rounded-full blur-[15px]"></span>
+                  </span>
+                );
+              })}
             </footer>
           </div>
         </div>

@@ -43,8 +43,6 @@ const navItemsPT = [
 
 const Navbar = ({ animate = false }: { animate?: boolean}) => {
   const [isEnglish, setIsEnglish] = useEnglishLanguage()!;
-
-  console.log(useEnglishLanguage());
   
 
   // return an array accoarding to language

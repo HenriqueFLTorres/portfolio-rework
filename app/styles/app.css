@@ -773,10 +773,6 @@ video {
   margin-bottom: 3rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
 .block {
   display: block;
 }
@@ -861,12 +857,14 @@ video {
   height: 5rem;
 }
 
-.h-\[1900px\] {
-  height: 1900px;
-}
-
 .h-auto {
   height: auto;
+}
+
+.h-max {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .w-screen {
@@ -947,6 +945,10 @@ video {
   width: 1920px;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .translate-y-1 {
   --tw-translate-y: 0.25rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -979,11 +981,6 @@ video {
 
 .translate-x-7 {
   --tw-translate-x: 1.75rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.-translate-y-24 {
-  --tw-translate-y: -6rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1312,10 +1309,6 @@ video {
   padding: 1rem;
 }
 
-.p-24 {
-  padding: 6rem;
-}
-
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -1369,18 +1362,6 @@ video {
 
 .pt-20 {
   padding-top: 5rem;
-}
-
-.pb-24 {
-  padding-bottom: 6rem;
-}
-
-.pb-48 {
-  padding-bottom: 12rem;
-}
-
-.pb-80 {
-  padding-bottom: 20rem;
 }
 
 .text-center {
@@ -1501,6 +1482,11 @@ video {
 }
 
 .blur-md {
+  --tw-blur: blur(12px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.blur-\[12px\] {
   --tw-blur: blur(12px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }

@@ -8,12 +8,21 @@ import { useEnglishLanguage } from "~/hooks/LanguageContext";
 
 let orderLimit = list.length - 1;
 
-const ProjectsSection = ({ projects }: any) => {
-  const [order, setOrder] = React.useState<any>(0);
+export interface ProjectProps {
+  title: string
+  "github-link": string
+  "live-link": string
+  date: string
+  "short-description": string
+  technologies: Array<string>
+}
+
+const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
+  const [order, setOrder] = React.useState<number>(0);
 
   const [isEnglish] = useEnglishLanguage()!;
 
-  const checkOrder = (givenNumber: Number) => {
+  const checkOrder = (givenNumber: number) => {
     if (givenNumber < 0) {
       return orderLimit;
     } else if (givenNumber > orderLimit) {
@@ -39,7 +48,7 @@ const ProjectsSection = ({ projects }: any) => {
           className="w-12 h-12 my-auto -order-10 z-50 stroke-primary rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]"
         />
         <div className="relative flex flex-row justify-center items-center gap-36">
-          {projects.map((item: any, index: number) => (
+          {projects.map((item: ProjectProps, index: number) => (
             <ProjectCard
               key={index}
               order={order}
@@ -47,6 +56,7 @@ const ProjectsSection = ({ projects }: any) => {
               orderLimit={orderLimit}
               title={item.title}
               date={item.date}
+              stackUsed={item.technologies}
               // github={item['github-link']}
               // link={item['live-link']}
             />
