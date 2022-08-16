@@ -43,10 +43,10 @@ const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
           {isEnglish ? "Some of my projects!" : "Alguns dos meus projetos!"}
         </p>
       </h3>
-      <div className="flex flex-row justify-between items-center w-full h-full px-4">
+      <div className="flex flex-row justify-between items-center w-full h-full px-[0px] sm:px-4">
         <Arrow
           onClick={() => setOrder(checkOrder(order - 1))}
-          className="w-12 h-12 my-auto -order-10 z-50 stroke-primary rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]"
+          className="w-12 h-12 my-auto translate-y-16 sm:translate-y-0 -order-10 z-50 stroke-primary rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]"
         />
         <div className="relative flex flex-row justify-center items-center gap-36">
           {projects.map((item: ProjectProps, index: number) => (
@@ -66,7 +66,7 @@ const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
         </div>
         <Arrow
           onClick={() => setOrder(checkOrder(order + 1))}
-          className="w-12 h-12 my-auto order-10 z-50 stroke-primary -rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]"
+          className="w-12 h-12 my-auto translate-y-16 sm:translate-y-0 order-10 z-50 stroke-primary -rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]"
         />
       </div>
     </section>

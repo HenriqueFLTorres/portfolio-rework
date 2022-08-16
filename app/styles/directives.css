@@ -8,13 +8,13 @@
   }
 
   .left {
-    opacity: 1;
+    opacity: 0.4;
     transform: translateX(-150%);
     transition: transform 300ms ease, opacity 300ms ease;
   }
 
   .right {
-    opacity: 1;
+    opacity: 0.4;
     transform: translateX(150%);
     transition: transform 300ms ease, opacity 300ms ease;
   }
@@ -22,6 +22,12 @@
   .center {
     transform: translateY(20%);
     transition: transform 300ms ease, opacity 300ms ease;
+  }
+
+  @media (min-width: 1200px) {
+    .right, .left {
+      opacity: 1;
+    }
   }
 
   @keyframes opacity {
