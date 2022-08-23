@@ -37,6 +37,7 @@ export default function ProjectPage({
   buildWith,
   challenges,
   learned,
+  ...otherProps
 }: Props) {
   const [isEnglish] = useEnglishLanguage()!;
 
@@ -67,14 +68,18 @@ export default function ProjectPage({
             <h1 className="text-primary font-bold md:mr-auto text-2xl md:text-3xl">
               {title}
             </h1>
-            <div className="hidden md:block group w-8 h-8 cursor-pointer">
-              <span className="absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
-              <GitHub className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
-            </div>
-            <div className="hidden md:block group w-8 cursor-pointer ml-8">
-              <span className="absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
-              <LinkIcon className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
-            </div>
+            <a href={github} target="_blank" rel="noreferrer">
+              <div className="hidden md:block group w-8 h-8 cursor-pointer">
+                <span className="absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
+                <GitHub className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
+              </div>
+            </a>
+            <a href={link} target="_blank" rel="noreferrer">
+              <div className="hidden md:block group w-8 cursor-pointer ml-8">
+                <span className="absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
+                <LinkIcon className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
+              </div>
+            </a>
           </div>
           <div className="flex flex-col w-full md:w-auto md:flex-row gap-10 md:gap-20">
             <div className="flex flex-col h-auto w-full md:w-3/5 gap-10">
@@ -95,14 +100,18 @@ export default function ProjectPage({
                     className="h-6 mr-auto md:mr-0 md:h-10 drop-shadow-[0_0_4px_#ffffffae]"
                   />
                 ))}
-                <div className="block md:hidden group w-6 cursor-pointer">
-                  <span className="absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
-                  <GitHub className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
-                </div>
-                <div className="block md:hidden group w-6 cursor-pointer">
-                  <span className="absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
-                  <LinkIcon className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
-                </div>
+                <a href={link} target="_blank" rel="noreferrer">
+                  <div className="block md:hidden group w-6 cursor-pointer">
+                    <span className="absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
+                    <GitHub className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
+                  </div>
+                </a>
+                <a href={link} target="_blank" rel="noreferrer">
+                  <div className="block md:hidden group w-6 cursor-pointer">
+                    <span className="absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200"></span>
+                    <LinkIcon className="fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform" />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -111,7 +120,7 @@ export default function ProjectPage({
           <div>
             <span className="flex flex-row items-center font-bold text-xl text-primary mb-4 md:mb-12 p-4">
               <img src={HandWriting} alt="" className="h-12 mr-6 inline" />
-              <h3>{ isEnglish ? "About the project" : "Sobre o projeto" }</h3>
+              <h3>{isEnglish ? "About the project" : "Sobre o projeto"}</h3>
             </span>
             <p className="text-primary font-light text-sm">{about}</p>
           </div>
@@ -123,7 +132,7 @@ export default function ProjectPage({
                 alt=""
                 className="h-12 mr-6 inline"
               />
-              <h3>{ isEnglish ? "Build with" : "Desenvolvido com" }</h3>
+              <h3>{isEnglish ? "Build with" : "Desenvolvido com"}</h3>
             </span>
             <p className="text-primary font-light text-sm">{buildWith}</p>
           </div>
@@ -131,7 +140,7 @@ export default function ProjectPage({
           <div>
             <span className="flex flex-row items-center font-bold text-xl text-primary mb-4 md:mb-12 p-4">
               <img src={Mountain} alt="" className="h-12 mr-6 inline" />
-              <h3>{ isEnglish ? "The challenges" : "Os desafios" }</h3>
+              <h3>{isEnglish ? "The challenges" : "Os desafios"}</h3>
             </span>
             <p className="text-primary font-light text-sm">{challenges}</p>
           </div>
@@ -139,7 +148,7 @@ export default function ProjectPage({
           <div>
             <span className="flex flex-row items-center font-bold text-xl text-primary  mb-12 p-4">
               <img src={Brain} alt="" className="h-12 mr-6 inline" />
-              <h3>{ isEnglish ? "What I've learned" : "Oque eu aprendi" }</h3>
+              <h3>{isEnglish ? "What I've learned" : "Oque eu aprendi"}</h3>
             </span>
             <p className="text-primary font-light text-sm">{learned}</p>
           </div>

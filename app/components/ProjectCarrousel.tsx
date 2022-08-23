@@ -22,7 +22,7 @@ const ProjectCarrousel = ({ images }: Props) => {
     <div className="w-screen md:w-full flex flex-row justify-center items-center my-32 md:mt-72 p-2 md:p-0">
       <Arrow
         onClick={() => setPosition(checkPosition(position - 1))}
-        className="stroke-primary z-10 h-14 rotate-90 mr-auto cursor-pointer drop-shadow-[0_0_4px_#ffffffa6]"
+        className="stroke-primary z-10 h-14 rotate-90 mr-auto cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]"
       />
       {images.map((image, index) => (
         <div
@@ -45,7 +45,7 @@ const ProjectCarrousel = ({ images }: Props) => {
       ))}
       <Arrow
         onClick={() => setPosition(checkPosition(position + 1))}
-        className="stroke-primary h-14 -rotate-90 ml-auto cursor-pointer drop-shadow-[0_0_4px_#ffffffa6]"
+        className="stroke-primary h-14 -rotate-90 ml-auto cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]"
       />
     </div>
   );
