@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import CircleParticle from "public/SVG/CircleParticle.png";
 
-const Background = (props: any) => {
+const Background = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {
@@ -40,9 +40,9 @@ const Background = (props: any) => {
         src={CircleParticle}
         alt=""
         className={`hidden md:block absolute min-w[800px] w-[800px] right-[-18rem] -bottom-[-12rem] -rotate-[220deg] blur-[30px] animate-[opacity_6s_infinite_alternate]`}
-        // style={{
-        //   transform: `translateX(-${scrollPosition * 0.02}px)`
-        // }}
+        style={{
+          transform: `translateX(-${scrollPosition * 0.02}px)`
+        }}
       />
     </div>
   );

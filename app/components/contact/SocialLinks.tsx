@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Blog from "public/linksIcons/Blog";
-import Discord from "public/linksIcons/Discord";
-import Email from "public/linksIcons/Email";
-import GitHub from "public/linksIcons/GitHub";
-import LeetCode from "public/linksIcons/LeetCode";
-import LinkedIn from "public/linksIcons/LinkedIn";
-import StackOverflow from "public/linksIcons/StackOverflow";
+import Blog from "public/SocialLinks/Blog";
+import Discord from "public/SocialLinks/Discord";
+import Email from "public/SocialLinks/Email";
+import GitHub from "public/SocialLinks/GitHub";
+import LeetCode from "public/SocialLinks/LeetCode";
+import LinkedIn from "public/SocialLinks/LinkedIn";
+import StackOverflow from "public/SocialLinks/StackOverflow";
 
 type Props = {};
 

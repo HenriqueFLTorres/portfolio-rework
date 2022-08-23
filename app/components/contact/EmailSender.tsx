@@ -1,5 +1,5 @@
 import React from "react";
-import Email from "public/linksIcons/Email";
+import Email from "public/SocialLinks/Email";
 
 type Props = {};
 

@@ -27,9 +27,7 @@ const ProjectCarrousel = ({ images }: Props) => {
       {images.map((image, index) => (
         <div
           key={image}
-          className={`${
-            position === index ? "absolute" : "hidden"
-          } w-3/5 md:w-[600px] h-[200px] md:h-[350px] rounded-xl select-none`}
+          className={`absolute w-3/5 md:w-[600px] h-[200px] md:h-[350px] rounded-xl select-none`}
         >
           <img
             src={image}

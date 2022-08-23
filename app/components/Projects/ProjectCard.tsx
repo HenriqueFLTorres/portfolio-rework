@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "@remix-run/react";
 
 import LinkIcon from "public/Icons/Link";
-import GitHub from "public/linksIcons/GitHub";
+import GitHub from "public/SocialLinks/GitHub";
 
 import * as Icon from "public/technologies";
 
@@ -69,21 +69,21 @@ const ProjectCard = ({
 
   // get style accoarding to the position of the carrousel
   const getPositionStyle = (cardPosition: Number) => {
-    if (cardPosition === order) {
-      return "center";
-    } else if (
+    if (cardPosition === order) return "center";
+    
+    if (
       cardPosition === order + 1 ||
       (cardPosition === 0 && order === orderLimit)
-    ) {
+    )
       return "left";
-    } else if (
+
+    if (
       cardPosition === order - 1 ||
       (order === 0 && cardPosition === orderLimit)
-    ) {
+    )
       return "right";
-    } else {
-      return "-translate-y-16 z-0 opacity-0";
-    }
+
+    return "-translate-y-16 z-0 opacity-0 transition-all duration-300";
   };
 
   const verifyRotation = (rotation: number) => {

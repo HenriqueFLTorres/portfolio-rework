@@ -1,4 +1,5 @@
 import { useEnglishLanguage } from "~/hooks/LanguageContext";
+
 import Logo from "public/Icons/Logo";
 
 const navItemsEN = [
@@ -41,21 +42,21 @@ const navItemsPT = [
   },
 ];
 
-const Navbar = ({ animate = false }: { animate?: boolean}) => {
+const Navbar = ({ animate = false }: { animate?: boolean }) => {
   const [isEnglish, setIsEnglish] = useEnglishLanguage()!;
-  
 
   // return an array accoarding to language
   const getNavItems = () => {
-    if (!isEnglish) {
-      return navItemsPT;
-    } else {
-      return navItemsEN;
-    }
+    if (!isEnglish) return navItemsPT;
+    else return navItemsEN;
   };
 
   return (
-    <nav className={`absolute z-50 xl:flex w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold${animate ? "opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]" : ""}`}>
+    <nav
+      className={`absolute z-50 xl:flex w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold${
+        animate ? " opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]" : ""
+      }`}
+    >
       <a href="/">
         <Logo className="h-12 w-12" />
       </a>

@@ -5,7 +5,7 @@ import GreenParticle from "public/SVG/GreenParticle.png";
 import RedParticle from "public/SVG/RedParticle.png";
 import PurpleParticle from "public/SVG/PurpleParticle.png";
 
-import GitHub from "public/linksIcons/GitHub";
+import GitHub from "public/SocialLinks/GitHub";
 import LinkIcon from "public/Icons/Link";
 
 import HandWriting from "public/Emojis/HandWriting.png";
@@ -26,7 +26,7 @@ type Props = {
   learned: string;
 };
 
-export default function ProjectPage({
+export default function ProjectsPage({
   title,
   images,
   shortDescription,

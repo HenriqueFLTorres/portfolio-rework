@@ -1,11 +1,11 @@
-import Background from "~/components/Background";
+import Background from "~/components/Shared/Background";
 
-import Navbar from "~/components/Navbar";
-import Introduction from "~/components/Home/Introduction";
-import AboutMe from "~/components/Home/AboutMe";
-import Technologies from "~/components/Home/Technologies";
-import ProjectsSection from "~/components/Home/ProjectsSection";
-import SocialLinks from "~/components/contact/SocialLinks";
+import Navbar from "~/components/Shared/Navbar";
+import Introduction from "~/Layouts/Home/Introduction";
+import AboutMe from "~/Layouts/Home/AboutMe";
+import Technologies from "~/Layouts/Home/Technologies";
+import ProjectsSection from "~/Layouts/Home/ProjectsSection";
+import SocialLinks from "~/components/Contact/SocialLinks";
 
 import * as mir4 from "~/routes/project/mir4cc.mdx";
 
