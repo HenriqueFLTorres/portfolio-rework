@@ -12,6 +12,7 @@ import * as mir4 from "~/routes/project/mir4cc.mdx";
 import { LanguageContext } from "~/hooks/LanguageContext";
 import type { LoaderFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
+import LatestArticles from "~/Layouts/Home/LatestArticles";
 
 const getProjectFromModule = (mod: any) => {
   return { ...mod.attributes };
@@ -42,6 +43,8 @@ export default function Index() {
       <Technologies />
 
       <ProjectsSection projects={data} />
+
+      <LatestArticles />
 
       <SocialLinks />
     </LanguageContext>

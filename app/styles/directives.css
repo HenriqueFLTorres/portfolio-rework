@@ -24,6 +24,10 @@
     transition: transform 300ms ease, opacity 300ms ease, background-color 300ms ease;
   }
 
+  .mask { 
+    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  }
+
   @media (min-width: 1200px) {
     .right, .left {
       opacity: 1;

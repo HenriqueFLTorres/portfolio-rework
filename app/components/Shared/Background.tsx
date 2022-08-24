@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import CircleParticle from "public/SVG/CircleParticle.png";
 
-const Background = () => {
+const Background = (props: any) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleScroll = () => {

@@ -65,8 +65,6 @@ const ProjectCard = ({
   const [imageRotation, setImageRotation] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
 
-  console.log(github);
-
   const TechnologiesNames = {
     CSS,
     Express: ExpressIcon,
@@ -123,10 +121,11 @@ const ProjectCard = ({
 
   return (
     <div
-      className={`absolute w-64 h-56 bg-neutral-700/70 rounded ${getPositionStyle(
+      className={`absolute w-64 h-max bg-neutral-700/70 rounded ${getPositionStyle(
         index
       )} hover:bg-neutral-600/70 z-20`}
       onMouseOver={() => setIsHovering(true)}
+      onMouseEnter={() => setImageRotation((prev) => verifyRotation(prev + 1))}
       onMouseLeave={() => {
         setIsHovering(false);
         setImageRotation(0);
@@ -135,7 +134,7 @@ const ProjectCard = ({
       <Link to="/project/mir4cc" target={"_blank"}>
         <div className="w-full h-full p-2 cursor-pointer">
           <div
-            className={`flex items-center justify-center relative h-1/2 rounded bg-neutral-900 text-2xl text-primary`}
+            className={`flex items-center justify-center relative h-[130px] max-h-[130px] rounded bg-neutral-900 text-2xl text-primary`}
           >
             <img
               src={images[imageRotation]}
@@ -153,8 +152,10 @@ const ProjectCard = ({
               <h4 className="font-bold text-sm text-primary">{title}</h4>
               <p className="font-light text-xs text-secondary">{date}</p>
             </header>
-            <p className="font-light text-xs text-secondary">
-              {shortDescription}
+            <p className="font-light text-xs text-secondary py-1 pb-4">
+              {shortDescription.length > 65
+                ? `${shortDescription.slice(0, 65)}...`
+                : shortDescription}
             </p>
             <footer className="flex flex-row gap-6">
               {stackUsed?.map((technology: TechnologyName) => {
