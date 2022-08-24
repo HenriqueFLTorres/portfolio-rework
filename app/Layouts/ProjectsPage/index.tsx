@@ -1,4 +1,4 @@
-import ProjectCarrousel from "~/components/ProjectCarrousel";
+import ProjectCarrousel from "app/components/Shared/ProjectCarrousel";
 import { useEnglishLanguage } from "~/hooks/LanguageContext";
 
 import GreenParticle from "public/SVG/GreenParticle.png";
@@ -8,10 +8,12 @@ import PurpleParticle from "public/SVG/PurpleParticle.png";
 import GitHub from "public/SocialLinks/GitHub";
 import LinkIcon from "public/Icons/Link";
 
-import HandWriting from "public/Emojis/HandWriting.png";
-import BuildingConstruction from "public/Emojis/BuildingConstruction.png";
-import Mountain from "public/Emojis/Mountain.png";
-import Brain from "public/Emojis/Brain.png";
+import {
+  HandWriting,
+  BuildingConstruction,
+  Mountain,
+  Brain,
+} from "public/Emojis";
 
 type Props = {
   title: string;
@@ -36,8 +38,7 @@ export default function ProjectsPage({
   about,
   buildWith,
   challenges,
-  learned,
-  ...otherProps
+  learned
 }: Props) {
   const [isEnglish] = useEnglishLanguage()!;
 

@@ -1,8 +1,10 @@
 import React from "react";
+
+import type { TechnologyName } from "~/components/Projects/ProjectCard";
 import ProjectCard from "~/components/Projects/ProjectCard";
 
 import Arrow from "public/Icons/Arrow";
-import list from "~/components/p.json";
+import list from "app/components/TemporaryData.json";
 
 import { useEnglishLanguage } from "~/hooks/LanguageContext";
 
@@ -10,11 +12,11 @@ let orderLimit = list.length - 1;
 
 export interface ProjectProps {
   title: string
-  "github-link": string
-  "live-link": string
+  githubLink: string
+  liveLink: string
   date: string
-  "short-description": string
-  technologies: Array<string>
+  shortDescription: string
+  technologies: Array<TechnologyName>
   images: Array<string>
 }
 
@@ -49,18 +51,19 @@ const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
           className="w-12 h-12 my-auto translate-y-16 sm:translate-y-0 -order-10 z-50 stroke-primary rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]"
         />
         <div className="relative flex flex-row justify-center items-center gap-36">
-          {projects.map((item: ProjectProps, index: number) => (
+          {projects.map(({ title, date, shortDescription, githubLink, liveLink, technologies, images }: ProjectProps, index: number) => (
             <ProjectCard
               key={index}
               order={order}
               index={index}
               orderLimit={orderLimit}
-              title={item.title}
-              date={item.date}
-              stackUsed={item.technologies}
-              images={item.images}
-              // github={item['github-link']}
-              // link={item['live-link']}
+              title={title}
+              date={date}
+              shortDescription={shortDescription}
+              github={githubLink}
+              link={liveLink}
+              stackUsed={technologies}
+              images={images}
             />
           ))}
         </div>

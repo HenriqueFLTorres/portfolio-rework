@@ -1,17 +1,6 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { LinkedIn, GitHub, Email, Blog, Discord, StackOverflow, LeetCode } from "public/SocialLinks"
 
-import Blog from "public/SocialLinks/Blog";
-import Discord from "public/SocialLinks/Discord";
-import Email from "public/SocialLinks/Email";
-import GitHub from "public/SocialLinks/GitHub";
-import LeetCode from "public/SocialLinks/LeetCode";
-import LinkedIn from "public/SocialLinks/LinkedIn";
-import StackOverflow from "public/SocialLinks/StackOverflow";
-
-type Props = {};
-
-const socialLinks = [
+const socialLinksIcons = [
   {
     component: LinkedIn,
     name: "LinkedIn",
@@ -49,17 +38,16 @@ const socialLinks = [
   },
 ];
 
-const SocialLinks = (props: Props) => {
+const SocialLinks = () => {
   
   return (
     <div id="contact" className="flex flex-col w-max mx-auto gap-6 mt-48 mb-36 xl:mb-52">
-      {socialLinks.map((link) => (
+      {socialLinksIcons.map((link) => (
         <a
           key={link.name}
           className="group w-48 xl:w-64 flex flex-row items-center rounded hover:bg-primary/10 px-5 py-4 cursor-pointer transition-colors duration-400"
           href={link.linkTo}
-          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-          onClick={() => {!link.linkTo ? navigator.clipboard.writeText(link.name) : null}}
+          onClick={() => !link.linkTo && navigator.clipboard.writeText(link.name)}
         >
           <link.component className="fill-primary/50 group-hover:fill-primary h-8 w-8 xl:h-12 xl:w-12 mr-2 xl:mr-6 group-hover:drop-shadow-[0_0_1px_rgba(255,255,255,0.8)] xl:group-hover:drop-shadow-[0_0_3px_rgba(255,255,255,0.8)] transition-all duration-400" />
           <p className="text-primary/50 group-hover:text-primary xl:text-xl font-semibold group-hover:drop-shadow-[0_0_1px_rgba(255,255,255,0.8)] xl:group-hover:drop-shadow-[0_0_2px_rgba(255,255,255,0.8)] transition-all duration-400">{link.name}</p>

@@ -4,7 +4,22 @@ import { Link } from "@remix-run/react";
 import LinkIcon from "public/Icons/Link";
 import GitHub from "public/SocialLinks/GitHub";
 
-import * as Icon from "public/technologies";
+import {
+  CSS,
+  ExpressIcon,
+  JavaScriptIcon,
+  JestIcon,
+  MongoDBIcon,
+  MongooseIcon,
+  NextJSIcon,
+  NodeIcon,
+  ReactIcon,
+  RemixIcon,
+  SASSIcon,
+  TailwindCSSIcon,
+  TestingLibraryIcon,
+  TypeScriptIcon,
+} from "public/technologies";
 
 export type ProjectCardProps = {
   title: string;
@@ -12,7 +27,7 @@ export type ProjectCardProps = {
   shortDescription: string;
   stackUsed: Array<TechnologyName>;
   github: string;
-  LinkIcon: string;
+  link: string;
   images: Array<string>;
   order: number;
   index: number;
@@ -37,10 +52,12 @@ export type TechnologyName =
 
 const ProjectCard = ({
   title,
+  shortDescription,
   date,
   github,
   images,
   order,
+  link,
   stackUsed,
   index,
   orderLimit,
@@ -51,26 +68,26 @@ const ProjectCard = ({
   console.log(github);
 
   const TechnologiesNames = {
-    CSS: Icon.CSS,
-    Express: Icon.ExpressIcon,
-    JavaScript: Icon.JavaScriptIcon,
-    Jest: Icon.JestIcon,
-    MongoDB: Icon.MongoDBIcon,
-    Mongoose: Icon.MongooseIcon,
-    NextJS: Icon.NextJSIcon,
-    Node: Icon.NodeIcon,
-    React: Icon.ReactIcon,
-    Remix: Icon.RemixIcon,
-    SASS: Icon.SASSIcon,
-    TailwindCSS: Icon.TailwindCSSIcon,
-    TestingLibrary: Icon.TestingLibraryIcon,
-    TypeScript: Icon.TypeScriptIcon,
+    CSS,
+    Express: ExpressIcon,
+    JavaScript: JavaScriptIcon,
+    Jest: JestIcon,
+    MongoDB: MongoDBIcon,
+    Mongoose: MongooseIcon,
+    NextJS: NextJSIcon,
+    Node: NodeIcon,
+    React: ReactIcon,
+    Remix: RemixIcon,
+    SASS: SASSIcon,
+    TailwindCSS: TailwindCSSIcon,
+    TestingLibrary: TestingLibraryIcon,
+    TypeScript: TypeScriptIcon,
   };
 
   // get style accoarding to the position of the carrousel
   const getPositionStyle = (cardPosition: Number) => {
     if (cardPosition === order) return "center";
-    
+
     if (
       cardPosition === order + 1 ||
       (cardPosition === 0 && order === orderLimit)
@@ -137,8 +154,7 @@ const ProjectCard = ({
               <p className="font-light text-xs text-secondary">{date}</p>
             </header>
             <p className="font-light text-xs text-secondary">
-              Taking advantage of features such as local storage and state
-              management...
+              {shortDescription}
             </p>
             <footer className="flex flex-row gap-6">
               {stackUsed?.map((technology: TechnologyName) => {

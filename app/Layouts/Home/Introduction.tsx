@@ -1,7 +1,7 @@
 import React from "react";
 
 import Logo from "public/Icons/Logo";
-import ScrollDown from "../../components/ScrollDown";
+import ScrollDown from "app/components/Shared/ScrollDown";
 
 const Introduction = () => {
   return (

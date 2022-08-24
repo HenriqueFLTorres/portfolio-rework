@@ -1,9 +1,6 @@
-import React from "react";
 import Email from "public/SocialLinks/Email";
 
-type Props = {};
-
-const EmailSender = (props: Props) => {
+const EmailSender = () => {
   return (
     <form className="flex flex-col items-center mb-40 gap-4 w-5/6 mx-auto">
       <div className="flex flex-row items-center w-full">
