@@ -6,4 +6,4 @@ import LeetCode from "./LeetCode";
 import LinkedIn from "./LinkedIn";
 import StackOverflow from "./StackOverflow";
 
-export { Blog, Discord, Email, GitHub, LeetCode, LinkedIn, StackOverflow }
+export { Blog, Discord, Email, GitHub, LeetCode, LinkedIn, StackOverflow };

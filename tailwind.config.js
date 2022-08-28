@@ -9,11 +9,12 @@ module.exports = {
         terciary: "#181818",
       },
       fontFamily: {
-        'OpenSans': ['"Open Sans"', 'cursive']
+        OpenSans: ['"Open Sans"', "sans serif"],
       },
       animation: {
-        bounceAndLight: 'bounce 3s ease-in-out infinite, light 2s ease-in-out infinite alternate',
-      }
+        bounceAndLight:
+          "bounce 3s ease-in-out infinite, light 2s ease-in-out infinite alternate",
+      },
     },
   },
   plugins: [],

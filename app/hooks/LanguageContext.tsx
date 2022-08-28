@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState } from "react";
 
-export const isLanguageEnglish = createContext<[boolean, React.Dispatch<boolean>] | null>(null);
+export const isLanguageEnglish = createContext<
+  [boolean, React.Dispatch<boolean>] | null
+>(null);
 
 export function useEnglishLanguage() {
   return useContext(isLanguageEnglish);

@@ -10,26 +10,35 @@
   .left {
     opacity: 0.4;
     transform: translateX(-150%);
-    transition: transform 300ms ease, opacity 300ms ease, background-color 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease,
+      background-color 300ms ease;
   }
 
   .right {
     opacity: 0.4;
     transform: translateX(150%);
-    transition: transform 300ms ease, opacity 300ms ease, background-color 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease,
+      background-color 300ms ease;
   }
 
   .center {
     transform: translateY(20%);
-    transition: transform 300ms ease, opacity 300ms ease, background-color 300ms ease;
+    transition: transform 300ms ease, opacity 300ms ease,
+      background-color 300ms ease;
   }
 
-  .mask { 
-    -webkit-mask-image: -webkit-gradient(linear, left 90%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  .mask {
+    -webkit-mask-image: linear-gradient(to top, transparent 0%, black 100%);
+    mask-image: linear-gradient(to top, transparent 5%, black 60%);
+  }
+
+  .article-image-mask {
+    -webkit-border-radius: 1rem 0 0 0;
   }
 
   @media (min-width: 1200px) {
-    .right, .left {
+    .right,
+    .left {
       opacity: 1;
     }
   }

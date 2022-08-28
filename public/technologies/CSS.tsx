@@ -15,6 +15,6 @@ const CSS = (props: any) => (
       }}
     />
   </svg>
-)
+);
 
-export default CSS
+export default CSS;
