@@ -1,4 +1,4 @@
-import Email from "public/SocialLinks/Email";
+import Email from 'public/SocialLinks/Email';
 
 const EmailSender = () => {
   return (
@@ -22,7 +22,12 @@ const EmailSender = () => {
         required
         className="w-full h-44 border-t-[1px] border-primary/20 p-2 rounded-lg bg-neutral-800/80 text-secondary placeholder:text-secondary/50 resize-none focus:caret-white focus:outline-white focus:outline-1 focus:outline"
       />
-      <button type={"submit"} className="w-full h-12 rounded-lg text-secondary bg-neutral-800/80 hover:bg-primary hover:text-terciary">Submit</button>
+      <button
+        type={'submit'}
+        className="w-full h-12 rounded-lg text-secondary bg-neutral-800/80 hover:bg-primary hover:text-terciary"
+      >
+        Submit
+      </button>
     </form>
   );
 };

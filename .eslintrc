@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "@remix-run/eslint-config",
-    "@remix-run/eslint-config/node",
-    "strongloop"
-  ],
-  "rules": { "max-len": 0 }
-}

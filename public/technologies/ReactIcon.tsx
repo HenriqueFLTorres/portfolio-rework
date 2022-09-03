@@ -6,12 +6,12 @@ const ReactIcon = (props: any) => (
     y={0}
     viewBox="0 0 200 200"
     style={{
-      enableBackground: "new 0 0 200 200",
+      enableBackground: 'new 0 0 200 200'
     }}
     xmlSpace="preserve"
     {...props}
   >
-    <style>{".st0{fill:#e1e1e1}"}</style>
+    <style>{'.st0{fill:#e1e1e1}'}</style>
     <g id="Layer_1_1_">
       <circle className="st0" cx={100} cy={100} r={17.3} />
       <path

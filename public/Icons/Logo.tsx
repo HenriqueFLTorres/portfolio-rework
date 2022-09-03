@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 const Logo = (props: any) => (
   <svg
@@ -7,13 +7,13 @@ const Logo = (props: any) => (
     y={0}
     viewBox="0 0 200 200"
     style={{
-      enableBackground: "new 0 0 200 200",
+      enableBackground: 'new 0 0 200 200'
     }}
     xmlSpace="preserve"
     {...props}
   >
     <style>
-      {".st0{fill:#e4e4e4;backdrop-filter:drop-shadow(4px 4px 10px #00f)}"}
+      {'.st0{fill:#e4e4e4;backdrop-filter:drop-shadow(4px 4px 10px #00f)}'}
     </style>
     <path
       className="st0"

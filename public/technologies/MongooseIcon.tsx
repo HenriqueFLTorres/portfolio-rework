@@ -3,7 +3,7 @@ const MongooseIcon = (props: any) => (
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 200 200"
     style={{
-      enableBackground: "new 0 0 200 200",
+      enableBackground: 'new 0 0 200 200'
     }}
     xmlSpace="preserve"
     {...props}
@@ -12,12 +12,12 @@ const MongooseIcon = (props: any) => (
       transform="translate(5 108.823)"
       style={{
         letterSpacing: -3,
-        fontSize: "46.7236px",
+        fontSize: '46.7236px',
         fontFamily: "'Helvetica'",
-        fill: "#e1e1e1",
+        fill: '#e1e1e1'
       }}
     >
-      {"mongoose"}
+      {'mongoose'}
     </text>
   </svg>
 );

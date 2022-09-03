@@ -11,12 +11,16 @@ const ArticleFragment = ({
   title,
   description,
   date,
-  image,
+  image
 }: ArticleFragmentProps) => (
-  <Link to="/project/mir4cc" target={'_blank'} className={'w-64'}>
+  <Link
+    to="/project/mir4cc"
+    target={'_blank'}
+    className={'w-full max-w-[300px]'}
+  >
     <div
       className={
-        'group relative w-64 h-max bg-neutral-700/70 rounded-tl-2xl rounded-br-2xl border-2 border-white/10 hover:border-[#E7BC19] hover:bg-neutral-900 z-20 transition-colors'
+        'group relative h-max bg-neutral-700/70 rounded-tl-2xl rounded-br-2xl border-2 border-white/10 hover:border-[#E7BC19] hover:bg-neutral-900 z-20 transition-colors'
       }
     >
       <span
@@ -35,7 +39,7 @@ const ArticleFragment = ({
           className="relative article-image-mask z-10 object-contain h-full"
         />
       </div>
-      <div className="flex flex-col justify-between items-center pt-2 px-3 h-1/2 ">
+      <div className="flex flex-col justify-between pt-2 px-3 h-1/2 ">
         <header className="flex flex-row justify-between items-center w-full">
           <h4 className="font-medium text-sm text-primary">{title}</h4>
         </header>

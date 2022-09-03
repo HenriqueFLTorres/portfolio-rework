@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "@remix-run/react";
+import React, { useEffect, useState } from 'react';
+import { Link } from '@remix-run/react';
 
-import LinkIcon from "public/Icons/Link";
-import GitHub from "public/SocialLinks/GitHub";
+import LinkIcon from 'public/Icons/Link';
+import GitHub from 'public/SocialLinks/GitHub';
 
 import {
   CSS,
@@ -18,8 +18,8 @@ import {
   SASSIcon,
   TailwindCSSIcon,
   TestingLibraryIcon,
-  TypeScriptIcon,
-} from "public/technologies";
+  TypeScriptIcon
+} from 'public/technologies';
 
 export type ProjectCardProps = {
   title: string;
@@ -35,20 +35,20 @@ export type ProjectCardProps = {
 };
 
 export type TechnologyName =
-  | "CSS"
-  | "Express"
-  | "JavaScript"
-  | "Jest"
-  | "MongoDB"
-  | "Mongoose"
-  | "NextJS"
-  | "Node"
-  | "React"
-  | "Remix"
-  | "SASS"
-  | "TailwindCSS"
-  | "TestingLibrary"
-  | "TypeScript";
+  | 'CSS'
+  | 'Express'
+  | 'JavaScript'
+  | 'Jest'
+  | 'MongoDB'
+  | 'Mongoose'
+  | 'NextJS'
+  | 'Node'
+  | 'React'
+  | 'Remix'
+  | 'SASS'
+  | 'TailwindCSS'
+  | 'TestingLibrary'
+  | 'TypeScript';
 
 const ProjectCard = ({
   title,
@@ -60,7 +60,7 @@ const ProjectCard = ({
   link,
   stackUsed,
   index,
-  orderLimit,
+  orderLimit
 }: ProjectCardProps) => {
   const [imageRotation, setImageRotation] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
@@ -79,26 +79,26 @@ const ProjectCard = ({
     SASS: SASSIcon,
     TailwindCSS: TailwindCSSIcon,
     TestingLibrary: TestingLibraryIcon,
-    TypeScript: TypeScriptIcon,
+    TypeScript: TypeScriptIcon
   };
 
   // get style accoarding to the position of the carrousel
-  const getPositionStyle = (cardPosition: Number) => {
-    if (cardPosition === order) return "center";
+  const getPositionStyle = (cardPosition: number) => {
+    if (cardPosition === order) return 'center';
 
     if (
       cardPosition === order + 1 ||
       (cardPosition === 0 && order === orderLimit)
     )
-      return "left";
+      return 'left';
 
     if (
       cardPosition === order - 1 ||
       (order === 0 && cardPosition === orderLimit)
     )
-      return "right";
+      return 'right';
 
-    return "-translate-y-16 z-0 opacity-0 transition-all duration-300";
+    return '-translate-y-16 z-0 opacity-0 transition-all duration-300';
   };
 
   const verifyRotation = (rotation: number) => {
@@ -108,7 +108,7 @@ const ProjectCard = ({
 
   useEffect(() => {
     if (isHovering) {
-      let timer = setTimeout(
+      const timer = setTimeout(
         () => setImageRotation((prev) => verifyRotation(prev + 1)),
         1500
       );
@@ -131,10 +131,12 @@ const ProjectCard = ({
         setImageRotation(0);
       }}
     >
-      <Link to="/project/mir4cc" target={"_blank"}>
+      <Link to="/project/mir4cc" target={'_blank'}>
         <div className="w-full h-full p-2 cursor-pointer">
           <div
-            className={`flex items-center justify-center relative h-[130px] max-h-[130px] rounded bg-neutral-900 text-2xl text-primary`}
+            className={
+              'flex items-center justify-center relative h-[130px] max-h-[130px] rounded bg-neutral-900 text-2xl text-primary'
+            }
           >
             <img
               src={images[imageRotation]}
@@ -159,7 +161,7 @@ const ProjectCard = ({
             </p>
             <footer className="flex flex-row gap-6">
               {stackUsed?.map((technology: TechnologyName) => {
-                let Component = TechnologiesNames[technology];
+                const Component = TechnologiesNames[technology];
 
                 return (
                   <span key={technology} className="relative w-5 h-5">
@@ -174,7 +176,7 @@ const ProjectCard = ({
       </Link>
       <span className="absolute flex flex-col justify-between w-10 h-20 rounded-r-md p-2 bg-[#e4e4e41a] shadow-[inset_0_0_8px_#00000078] top-4 -right-4 translate-x-6">
         <a
-          href={"https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator"}
+          href={'https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator'}
           target="_blank"
           rel="noreferrer"
         >
@@ -184,7 +186,7 @@ const ProjectCard = ({
           </div>
         </a>
         <a
-          href={"https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator"}
+          href={'https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator'}
           target="_blank"
           rel="noreferrer"
         >

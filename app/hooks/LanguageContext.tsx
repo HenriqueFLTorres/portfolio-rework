@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState } from 'react';
 
 export const isLanguageEnglish = createContext<
   [boolean, React.Dispatch<boolean>] | null
@@ -12,7 +12,7 @@ export function LanguageContext({ children }: any) {
 
   const LanguageState: [boolean, React.Dispatch<boolean>] = [
     isEnglishLanguage,
-    setIsEnglishLanguage,
+    setIsEnglishLanguage
   ];
 
   return (

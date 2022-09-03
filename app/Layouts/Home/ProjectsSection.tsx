@@ -8,7 +8,7 @@ import list from 'app/components/TemporaryData.json';
 
 import { useEnglishLanguage } from '~/hooks/LanguageContext';
 
-let orderLimit = list.length - 1;
+const orderLimit = list.length - 1;
 
 export interface ProjectProps {
   title: string;
@@ -58,9 +58,9 @@ const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
                 githubLink,
                 liveLink,
                 technologies,
-                images,
+                images
               }: ProjectProps,
-              index: number,
+              index: number
             ) => (
               <ProjectCard
                 key={index}
@@ -75,7 +75,7 @@ const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
                 stackUsed={technologies}
                 images={images}
               />
-            ),
+            )
           )}
         </div>
         <Arrow

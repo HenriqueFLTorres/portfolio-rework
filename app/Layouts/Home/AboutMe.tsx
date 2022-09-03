@@ -1,10 +1,10 @@
-import { useEnglishLanguage } from "~/hooks/LanguageContext";
+import { useEnglishLanguage } from '~/hooks/LanguageContext';
 
-import WavingHand from "public/Emojis/WavingHand.png";
-import Globe from "public/Emojis/Globe.png";
-import CrystalBall from "public/Emojis/CrystalBall.png";
-import HandWriting from "public/Emojis/HandWriting.png";
-import HandPointingRight from "public/Emojis/HandPointingRight.png";
+import WavingHand from 'public/Emojis/WavingHand.png';
+import Globe from 'public/Emojis/Globe.png';
+import CrystalBall from 'public/Emojis/CrystalBall.png';
+import HandWriting from 'public/Emojis/HandWriting.png';
+import HandPointingRight from 'public/Emojis/HandPointingRight.png';
 
 const AboutMe = () => {
   const [isEnglish] = useEnglishLanguage()!;
@@ -20,13 +20,13 @@ const AboutMe = () => {
             src={WavingHand}
             alt=""
             className="h-8 xl:h-12 mr-4 xl:mr-8 inline"
-          />{" "}
-          {isEnglish ? "Who am I?" : "Quem sou eu?"}
+          />{' '}
+          {isEnglish ? 'Who am I?' : 'Quem sou eu?'}
         </h3>
         <p className="font-light text-base xl:text-lg p-6">
           {isEnglish
-            ? "Hello, I am Henrique Torres, a passionate developer who has dreamed for decades about being a Software Developer. With the first console.log(), I fell in love with programming, and since then, I have been studying and practicing hard to show my skills to the"
-            : "Olá, sou Henrique Torres, um desenvolvedor apaixonado que sonhou por décadas sobre ser um desenvolvedor de software. Com o primeiro console.log(), me apaixonei por programação e, desde então, tenho estudando e praticando muito para mostrar minhas habilidades para o "}{" "}
+            ? 'Hello, I am Henrique Torres, a passionate developer who has dreamed for decades about being a Software Developer. With the first console.log(), I fell in love with programming, and since then, I have been studying and practicing hard to show my skills to the'
+            : 'Olá, sou Henrique Torres, um desenvolvedor apaixonado que sonhou por décadas sobre ser um desenvolvedor de software. Com o primeiro console.log(), me apaixonei por programação e, desde então, tenho estudando e praticando muito para mostrar minhas habilidades para o '}{' '}
           <img src={Globe} alt="" className="h-4 inline mr-1" />!
         </p>
       </div>
@@ -36,14 +36,15 @@ const AboutMe = () => {
             src={CrystalBall}
             alt=""
             className="h-8 xl:h-12 mr-4 xl:mr-8 inline"
-          />{" "}
+          />{' '}
           {isEnglish
-            ? "Where do I see myself in 5 years?"
-            : "Onde eu me vejo em 5 anos?"}
+            ? 'Where do I see myself in 5 years?'
+            : 'Onde eu me vejo em 5 anos?'}
         </h3>
         <p className="font-light text-base xl:text-lg p-6">
-          { isEnglish ? "I want to financially stabilize myself and my family, providing them with a safer and healthier place. I will also expand my knowledge of software engineering, computer security, ethical hacking, and design with a dream to become a modern world polymath!"
-          : "Quero estabilizar financeiramente a família e a mim, proporcionando a eles um lugar mais seguro e saudável. Também expandirei meu conhecimento de engenharia de software, segurança de computadores, hacking ético e design com um sonho de me tornar um polímata do mundo moderno!" }
+          {isEnglish
+            ? 'I want to financially stabilize myself and my family, providing them with a safer and healthier place. I will also expand my knowledge of software engineering, computer security, ethical hacking, and design with a dream to become a modern world polymath!'
+            : 'Quero estabilizar financeiramente a família e a mim, proporcionando a eles um lugar mais seguro e saudável. Também expandirei meu conhecimento de engenharia de software, segurança de computadores, hacking ético e design com um sonho de me tornar um polímata do mundo moderno!'}
         </p>
       </div>
       <div className="flex flex-col xl:w-1/2 text-primary font-display text-2xl my-auto xl:mt-32 xl:px-8 mt-12">
@@ -52,20 +53,20 @@ const AboutMe = () => {
             src={HandWriting}
             alt=""
             className="h-8 xl:h-12 mr-4 xl:mr-8 inline"
-          />{" "}
-          {isEnglish ? "Check out my Blog" : "Dê uma olhada no meu Blog"}
+          />{' '}
+          {isEnglish ? 'Check out my Blog' : 'Dê uma olhada no meu Blog'}
         </h3>
         <p className="font-light text-base xl:text-lg p-6 text-center">
           {isEnglish
-            ? "Read articles about diverse content in software development. I am constantly updating it with new knowledge that I acquire!"
-            : "Leia artigos sobre diversos conteúdos envolvendo o desenvolvimento de software. Estou constantemente atualizando-o com novos conhecimentos que adquiro!"}
+            ? 'Read articles about diverse content in software development. I am constantly updating it with new knowledge that I acquire!'
+            : 'Leia artigos sobre diversos conteúdos envolvendo o desenvolvimento de software. Estou constantemente atualizando-o com novos conhecimentos que adquiro!'}
           <br />
           <br />
           <img
             src={HandPointingRight}
             alt=""
             className="h-4 inline mr-1"
-          />{" "}
+          />{' '}
           <a
             href="https://simplifiedknowledge.vercel.app/"
             target="_blank"
