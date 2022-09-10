@@ -38,7 +38,7 @@ const ProjectsSection = ({ projects }: { projects: Array<ProjectProps> }) => {
   return (
     <section
       id='projects'
-      className='flex flex-col items-center mb-48 mt-32 xl:mt-60 h-[600px] xl:w-[1400px] xl:mx-auto scroll-mt-24'
+      className='flex flex-col items-center mb-48 mt-32 xl:mt-60 h-[600px] xl:w-[1400px] xl:mx-auto scroll-mt-24 overflow-hidden'
     >
       <h3 className='flex flex-col w-full md:w-auto items-center text-center md:text-left gap-4 md:gap-0 md:flex-row font-bold text-4xl xl:text-5xl xl:mb-6 mx-8 text-primary p-4'>
           <img
