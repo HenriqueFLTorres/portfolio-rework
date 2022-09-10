@@ -43,7 +43,7 @@ const navItemsPT = [
 ];
 
 const Navbar = ({ animate = false }: { animate?: boolean }) => {
-  const [isEnglish, setIsEnglish] = useEnglishLanguage()!;
+  const { isEnglish, setIsEnglish } = useEnglishLanguage();
 
   // return an array accoarding to language
   const getNavItems = () => {
@@ -57,14 +57,14 @@ const Navbar = ({ animate = false }: { animate?: boolean }) => {
         animate ? ' opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]' : ''
       }`}
     >
-      <a href="/">
-        <Logo className="h-12 w-12" />
+      <a href='/'>
+        <Logo className='h-12 w-12' />
       </a>
-      <div className="hidden md:flex flex-row justify-between w-3/6">
+      <div className='hidden md:flex flex-row justify-between w-3/6'>
         {getNavItems().map((item) => (
           <a
             key={item.name}
-            className="hover:translate-y-1 hover:text-primary transition-all duration-300"
+            className='hover:translate-y-1 hover:text-primary transition-all duration-300'
             href={item.href}
             target={`${item.link ? '_blank' : ''}`}
           >
@@ -72,8 +72,8 @@ const Navbar = ({ animate = false }: { animate?: boolean }) => {
           </a>
         ))}
       </div>
-      <div className="flex flex-col items-center gap-1 translate-y-1">
-        <div className="flex font-bold select-none">
+      <div className='flex flex-col items-center gap-1 translate-y-1'>
+        <div className='flex font-bold select-none'>
           <span
             className={`mx-4 cursor-pointer ${
               !isEnglish && 'text-primary'

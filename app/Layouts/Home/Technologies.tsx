@@ -37,21 +37,21 @@ const technologiesIcons = [
 const Technologies = () => {
   const [iconHover, setIconHover] = React.useState<string>('');
 
-  const [isEnglish] = useEnglishLanguage()!;
+  const { isEnglish } = useEnglishLanguage();
 
   return (
-    <div className="xl:w-[1200px] xl:mx-auto">
-      <h3 className="flex flex-row xl:h-52 justify-center font-bold text-3xl xl:text-5xl xl:mb-6 text-primary mt-36 p-4">
+    <div className='xl:w-[1200px] xl:mx-auto'>
+      <h3 className='flex flex-row xl:h-52 justify-center font-bold text-3xl xl:text-5xl xl:mb-6 text-primary mt-36 p-4'>
         <img
           src={HeartFace}
-          alt=""
-          className="h-8 xl:h-12 mr-4 xl:mr-8 inline"
+          alt=''
+          className='h-8 xl:h-12 mr-4 xl:mr-8 inline'
         />
         <p>
           {isEnglish ? 'Technologies that i use!' : 'Tecnologias que eu uso!'}
         </p>
       </h3>
-      <div className="flex flex-wrap justify-center gap-6 my-12">
+      <div className='flex flex-wrap justify-center gap-6 my-12'>
         {technologiesIcons.map((Icon, index) => {
           let formatName = Icon.name.replace('Icon', '');
           formatName = formatName.replaceAll('_', ' ');
@@ -65,7 +65,7 @@ const Technologies = () => {
                 onMouseOver={() => setIconHover(formatName)}
                 onClick={() => setIconHover(formatName)}
                 onMouseOut={() => setIconHover('')}
-                className="h-16 w-16 drop-shadow-[0_0__2px_rgba(255,255,255,0.8)] group-hover:scale-125 cursor-pointer bg-terciary/40 rounded p-2 transition-transform duration-200"
+                className='h-16 w-16 drop-shadow-[0_0__2px_rgba(255,255,255,0.8)] group-hover:scale-125 cursor-pointer bg-terciary/40 rounded p-2 transition-transform duration-200'
               />
               <span
                 className={`absolute rounded ${

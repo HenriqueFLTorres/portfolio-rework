@@ -14,7 +14,7 @@ const ArticleFragment = ({
   image
 }: ArticleFragmentProps) => (
   <Link
-    to="/project/mir4cc"
+    to='/project/mir4cc'
     target={'_blank'}
     className={'w-full max-w-[300px]'}
   >
@@ -35,18 +35,18 @@ const ArticleFragment = ({
       >
         <img
           src={image}
-          alt=""
-          className="relative article-image-mask z-10 object-contain h-full"
+          alt=''
+          className='relative article-image-mask z-10 object-contain h-full'
         />
       </div>
-      <div className="flex flex-col justify-between pt-2 px-3 h-1/2 ">
-        <header className="flex flex-row justify-between items-center w-full">
-          <h4 className="font-medium text-sm text-primary">{title}</h4>
+      <div className='flex flex-col justify-between pt-2 px-3 h-1/2 '>
+        <header className='flex flex-row justify-between items-center w-full'>
+          <h4 className='font-medium text-sm text-primary'>{title}</h4>
         </header>
-        <p className="font-light text-xs text-secondary py-1 pb-3">
+        <p className='font-light text-xs text-secondary py-1 pb-3'>
           {description}
         </p>
-        <p className="font-light text-xs text-secondary pb-2 mr-auto">{date}</p>
+        <p className='font-light text-xs text-secondary pb-2 mr-auto'>{date}</p>
       </div>
     </div>
   </Link>

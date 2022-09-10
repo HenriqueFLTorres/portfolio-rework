@@ -19,10 +19,10 @@ const ProjectCarrousel = ({ images }: Props) => {
   };
 
   return (
-    <div className="w-screen md:w-full flex flex-row justify-center items-center my-32 md:mt-72 p-2 md:p-0">
+    <div className='w-screen md:w-full flex flex-row justify-center items-center my-32 md:mt-72 p-2 md:p-0'>
       <Arrow
         onClick={() => setPosition(checkPosition(position - 1))}
-        className="stroke-primary z-10 h-14 rotate-90 mr-auto cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]"
+        className='stroke-primary z-10 h-14 rotate-90 mr-auto cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]'
       />
       {images.map((image, index) => (
         <div
@@ -33,19 +33,19 @@ const ProjectCarrousel = ({ images }: Props) => {
         >
           <img
             src={image}
-            alt=""
-            className="absolute w-full h-full blur-[5px] md:blur-[10px] rounded"
+            alt=''
+            className='absolute w-full h-full blur-[5px] md:blur-[10px] rounded'
           />
           <img
             src={image}
-            alt=""
-            className="absolute w-full h-full object-contain rounded"
+            alt=''
+            className='absolute w-full h-full object-contain rounded'
           />
         </div>
       ))}
       <Arrow
         onClick={() => setPosition(checkPosition(position + 1))}
-        className="stroke-primary h-14 -rotate-90 ml-auto cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]"
+        className='stroke-primary h-14 -rotate-90 ml-auto cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_4px_rgba(255,255,255,0.8)]'
       />
     </div>
   );

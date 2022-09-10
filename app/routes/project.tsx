@@ -6,7 +6,7 @@ import Navbar from '~/components/Shared/Navbar';
 
 export default function Project() {
   return (
-    <div className="h-[1800px]">
+    <div className='h-[1800px]'>
       <LanguageContext>
         <Background />
         <Navbar />

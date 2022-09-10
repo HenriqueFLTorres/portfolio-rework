@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en" className="font-OpenSans scroll-smooth overflow-x-hidden">
+    <html lang='en' className='font-OpenSans scroll-smooth overflow-x-hidden'>
       <head>
         <Meta />
         <Links />
