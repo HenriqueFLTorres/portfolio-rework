@@ -98,7 +98,7 @@ const ProjectCard = ({
     )
       return 'right';
 
-    return '-translate-y-16 z-0 opacity-0 transition-all duration-300';
+    return '-translate-y-16 z-0 opacity-0 transition-all duration-500';
   };
 
   const verifyRotation = (rotation: number) => {

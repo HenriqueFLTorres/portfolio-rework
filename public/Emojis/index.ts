@@ -8,6 +8,7 @@ import HandPointingRight from './HandPointingRight.png';
 import HandWriting from './HandWriting.png';
 import HeartFace from './HeartFace.png';
 import Mountain from './Mountain.png';
+import OpenBook from './OpenBook.png';
 import WavingHand from './WavingHand.png';
 
 export {
@@ -21,5 +22,6 @@ export {
   HandWriting,
   HeartFace,
   Mountain,
+  OpenBook,
   WavingHand
 };

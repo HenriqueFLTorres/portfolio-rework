@@ -1,6 +1,7 @@
-import ArticleFragment from '~/components/Shared/ArticleFragment';
-
 import { useEnglishLanguage } from '~/hooks/LanguageContext';
+
+import ArticleFragment from '~/components/Shared/ArticleFragment';
+import { OpenBook } from 'public/Emojis';
 
 const LatestArticles = () => {
   const { isEnglish } = useEnglishLanguage();
@@ -8,17 +9,24 @@ const LatestArticles = () => {
   return (
     <section
       id='projects'
-      className='relative w-full mx-auto px-8 max-w-[1200px] small:w-4/5 small:px-0  mb-72'
+      className='relative w-full mx-auto max-w-[1200px] small:w-4/5 small:px-0 mb-72'
     >
-      <h3 className='flex flex-row justify-center font-bold text-3xl xl:text-5xl mb-24 text-primary p-4'>
+      <h3 className='flex flex-col items-center gap-4 md:gap-0 md:flex-row xl:h-52 justify-center font-bold text-center md:text-left text-4xl xl:text-5xl mb-20 text-primary mt-36 p-4'>
+        <img
+          src={OpenBook}
+          alt=''
+          className='h-12 w-12 xl:h-14 xl:w-14 md:mr-4 xl:mr-8 inline'
+        />
+        <p>
         {isEnglish ? 'Check out my latest articles!' : 'Artigos mais recentes!'}
+        </p>
       </h3>
-      <div className='grid grid-cols-[repeat(1,_minmax(150px,_1fr))] small:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] justify-items-center gap-x-14 gap-y-8 sm:gap-x-24 sm:gap-y-16'>
+      <div className='grid grid-cols-[repeat(1,_minmax(150px,_1fr))] sm:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] justify-items-center gap-x-14 gap-y-8 sm:gap-x-24 sm:gap-y-16 px-4'>
         <ArticleFragment
           title={'Reference and Value: Why you should know the difference'}
           date={'08 04 22'}
           description={
-            "If for some reason you've tried comparing objects or arrays in JavaScript, you probably went..."
+            'If for some reason you\'ve tried comparing objects or arrays in JavaScript, you probably went...'
           }
           image={'https://i.imgur.com/kFUrjL9.png'}
         ></ArticleFragment>
@@ -26,7 +34,7 @@ const LatestArticles = () => {
           title={'Reference and Value: Why you should know the difference'}
           date={'08 04 22'}
           description={
-            "If for some reason you've tried comparing objects or arrays in JavaScript, you probably went..."
+            'If for some reason you\'ve tried comparing objects or arrays in JavaScript, you probably went...'
           }
           image={'https://i.imgur.com/kFUrjL9.png'}
         />
@@ -34,11 +42,12 @@ const LatestArticles = () => {
           title={'Reference and Value: Why you should know the difference'}
           date={'08 04 22'}
           description={
-            "If for some reason you've tried comparing objects or arrays in JavaScript, you probably went..."
+            'If for some reason you\'ve tried comparing objects or arrays in JavaScript, you probably went...'
           }
           image={'https://i.imgur.com/kFUrjL9.png'}
         />
       </div>
+      <div className='flex flex-col px-4'>
       <p className='w-max text-neutral-400 mx-auto mt-12 mb-4'>
         {isEnglish ? 'Want to see more?' : 'Quer ver mais?'}
       </p>
@@ -54,6 +63,7 @@ const LatestArticles = () => {
           ? 'Find more awesome articles!'
           : 'Encontre mais artigos incríveis!'}
       </a>
+      </div>
     </section>
   );
 };

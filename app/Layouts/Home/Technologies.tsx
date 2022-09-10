@@ -41,17 +41,17 @@ const Technologies = () => {
 
   return (
     <div className='xl:w-[1200px] xl:mx-auto'>
-      <h3 className='flex flex-row xl:h-52 justify-center font-bold text-3xl xl:text-5xl xl:mb-6 text-primary mt-36 p-4'>
+      <h3 className='flex flex-col items-center gap-4 md:gap-0 md:flex-row xl:h-52 justify-center font-bold text-center md:text-left text-4xl xl:text-5xl xl:mb-6 text-primary mt-36 p-4'>
         <img
           src={HeartFace}
           alt=''
-          className='h-8 xl:h-12 mr-4 xl:mr-8 inline'
+          className='h-12 w-12 xl:h-14 xl:w-14 md:mr-4 xl:mr-8 inline'
         />
         <p>
           {isEnglish ? 'Technologies that i use!' : 'Tecnologias que eu uso!'}
         </p>
       </h3>
-      <div className='flex flex-wrap justify-center gap-6 my-12'>
+      <div className='flex flex-wrap justify-center gap-6 my-12 p-4 md:p-12'>
         {technologiesIcons.map((Icon, index) => {
           let formatName = Icon.name.replace('Icon', '');
           formatName = formatName.replaceAll('_', ' ');
