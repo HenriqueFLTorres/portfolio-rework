@@ -64,7 +64,7 @@ const Navbar = ({ animate = false }: { animate?: boolean }) => {
         {getNavItems().map((item) => (
           <a
             key={item.name}
-            className='hover:translate-y-1 hover:text-primary transition-all duration-300'
+            className='hover:translate-y-1 hover:text-primary transition-[color,_transform] duration-300'
             href={item.href}
             target={`${item.link ? '_blank' : ''}`}
           >

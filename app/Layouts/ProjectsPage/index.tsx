@@ -71,13 +71,13 @@ export default function ProjectsPage({
             </h1>
             <a href={github} target='_blank' rel='noreferrer'>
               <div className='hidden md:block group w-8 h-8 cursor-pointer'>
-                <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200'></span>
+                <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
                 <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
               </div>
             </a>
             <a href={link} target='_blank' rel='noreferrer'>
               <div className='hidden md:block group w-8 cursor-pointer ml-8'>
-                <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200'></span>
+                <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
                 <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
               </div>
             </a>
@@ -103,13 +103,13 @@ export default function ProjectsPage({
                 ))}
                 <a href={link} target='_blank' rel='noreferrer'>
                   <div className='block md:hidden group w-6 cursor-pointer'>
-                    <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200'></span>
+                    <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
                     <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
                   </div>
                 </a>
                 <a href={link} target='_blank' rel='noreferrer'>
                   <div className='block md:hidden group w-6 cursor-pointer'>
-                    <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200'></span>
+                    <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
                     <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
                   </div>
                 </a>
@@ -149,7 +149,7 @@ export default function ProjectsPage({
           <div>
             <span className='flex flex-row items-center font-bold text-xl text-primary  mb-12 p-4'>
               <img src={Brain} alt='' className='h-12 mr-6 inline' />
-              <h3>{isEnglish ? "What I've learned" : 'Oque eu aprendi'}</h3>
+              <h3>{isEnglish ? 'What I\'ve learned' : 'Oque eu aprendi'}</h3>
             </span>
             <p className='text-primary font-light text-sm'>{learned}</p>
           </div>

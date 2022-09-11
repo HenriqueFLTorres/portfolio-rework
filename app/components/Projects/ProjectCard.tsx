@@ -98,7 +98,7 @@ const ProjectCard = ({
     )
       return 'right';
 
-    return '-translate-y-16 z-0 opacity-0 transition-all duration-500';
+    return '-translate-y-16 z-0 opacity-0 transition-[background-color,_transform,_opacity] duration-[400ms]';
   };
 
   const verifyRotation = (rotation: number) => {
@@ -181,7 +181,7 @@ const ProjectCard = ({
           rel='noreferrer'
         >
           <div className='group cursor-pointer'>
-            <span className='block absolute w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200'></span>
+            <span className='block absolute w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
             <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
           </div>
         </a>
@@ -191,7 +191,7 @@ const ProjectCard = ({
           rel='noreferrer'
         >
           <div className='group cursor-pointer'>
-            <span className='block top-12 absolute w-6 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-200'></span>
+            <span className='block top-12 absolute w-6 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
             <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
           </div>
         </a>
