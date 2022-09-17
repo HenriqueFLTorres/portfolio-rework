@@ -1,10 +1,10 @@
-const ExpressjsIcon = (props: any) => (
+const ExpressjsIcon = (
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 200 200'
-    style={{
-      enableBackground: 'new 0 0 200 200'
-    }}
+    enableBackground='new 0 0 200 200'
     xmlSpace='preserve'
     {...props}
   >

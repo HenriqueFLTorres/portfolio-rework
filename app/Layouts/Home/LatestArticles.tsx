@@ -18,7 +18,9 @@ const LatestArticles = () => {
           className='h-12 w-12 xl:h-14 xl:w-14 md:mr-4 xl:mr-8 inline'
         />
         <p>
-        {isEnglish ? 'Check out my latest articles!' : 'Artigos mais recentes!'}
+          {isEnglish
+            ? 'Check out my latest articles!'
+            : 'Artigos mais recentes!'}
         </p>
       </h3>
       <div className='grid grid-cols-[repeat(1,_minmax(150px,_1fr))] sm:grid-cols-[repeat(auto-fit,_minmax(250px,_1fr))] justify-items-center gap-x-14 gap-y-8 sm:gap-x-24 sm:gap-y-16 px-4'>
@@ -26,7 +28,7 @@ const LatestArticles = () => {
           title={'Reference and Value: Why you should know the difference'}
           date={'08 04 22'}
           description={
-            'If for some reason you\'ve tried comparing objects or arrays in JavaScript, you probably went...'
+            "If for some reason you've tried comparing objects or arrays in JavaScript, you probably went..."
           }
           image={'https://i.imgur.com/kFUrjL9.png'}
         ></ArticleFragment>
@@ -34,7 +36,7 @@ const LatestArticles = () => {
           title={'Reference and Value: Why you should know the difference'}
           date={'08 04 22'}
           description={
-            'If for some reason you\'ve tried comparing objects or arrays in JavaScript, you probably went...'
+            "If for some reason you've tried comparing objects or arrays in JavaScript, you probably went..."
           }
           image={'https://i.imgur.com/kFUrjL9.png'}
         />
@@ -42,27 +44,27 @@ const LatestArticles = () => {
           title={'Reference and Value: Why you should know the difference'}
           date={'08 04 22'}
           description={
-            'If for some reason you\'ve tried comparing objects or arrays in JavaScript, you probably went...'
+            "If for some reason you've tried comparing objects or arrays in JavaScript, you probably went..."
           }
           image={'https://i.imgur.com/kFUrjL9.png'}
         />
       </div>
       <div className='flex flex-col px-4'>
-      <p className='w-max text-neutral-400 mx-auto mt-12 mb-4'>
-        {isEnglish ? 'Want to see more?' : 'Quer ver mais?'}
-      </p>
-      <a
-        href={'https://simplifiedknowledge.vercel.app/'}
-        target='_blank'
-        rel='noreferrer'
-        className={
-          'flex items-center justify-center w-full rounded-xl small:rounded-full mx-auto bg-white text-neutral-800 hover:bg-neutral-400 font-bold py-3 px-4 cursor-pointer text-center transition-colors'
-        }
-      >
-        {isEnglish
-          ? 'Find more awesome articles!'
-          : 'Encontre mais artigos incríveis!'}
-      </a>
+        <p className='w-max text-neutral-400 mx-auto mt-12 mb-4'>
+          {isEnglish ? 'Want to see more?' : 'Quer ver mais?'}
+        </p>
+        <a
+          href={'https://simplifiedknowledge.vercel.app/'}
+          target='_blank'
+          rel='noreferrer'
+          className={
+            'flex items-center justify-center w-full rounded-xl small:rounded-full mx-auto bg-white text-neutral-800 hover:bg-neutral-400 font-bold py-3 px-4 cursor-pointer text-center transition-colors'
+          }
+        >
+          {isEnglish
+            ? 'Find more awesome articles!'
+            : 'Encontre mais artigos incríveis!'}
+        </a>
       </div>
     </section>
   );

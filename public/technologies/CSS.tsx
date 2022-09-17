@@ -1,10 +1,10 @@
-const CSS = (props: any) => (
+const CSS = (
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 20 20'
-    style={{
-      enableBackground: 'new 0 0 20 20'
-    }}
+    enableBackground='new 0 0 20 20'
     xmlSpace='preserve'
     {...props}
   >

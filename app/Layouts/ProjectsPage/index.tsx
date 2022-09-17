@@ -149,7 +149,7 @@ export default function ProjectsPage({
           <div>
             <span className='flex flex-row items-center font-bold text-xl text-primary  mb-12 p-4'>
               <img src={Brain} alt='' className='h-12 mr-6 inline' />
-              <h3>{isEnglish ? 'What I\'ve learned' : 'Oque eu aprendi'}</h3>
+              <h3>{isEnglish ? "What I've learned" : 'Oque eu aprendi'}</h3>
             </span>
             <p className='text-primary font-light text-sm'>{learned}</p>
           </div>

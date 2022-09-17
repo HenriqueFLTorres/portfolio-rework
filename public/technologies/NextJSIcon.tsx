@@ -1,13 +1,13 @@
-const NextjsIcon = (props: any) => (
+const NextjsIcon = (
+  props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+) => (
   <svg
     id='Layer_1'
     xmlns='http://www.w3.org/2000/svg'
     x={0}
     y={0}
     viewBox='0 0 200 200'
-    style={{
-      enableBackground: 'new 0 0 200 200'
-    }}
+    enableBackground='new 0 0 200 200'
     xmlSpace='preserve'
     {...props}
   >
