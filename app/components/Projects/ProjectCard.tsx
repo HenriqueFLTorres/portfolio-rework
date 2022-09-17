@@ -176,7 +176,7 @@ const ProjectCard = ({
       </Link>
       <span className='absolute flex flex-col justify-between w-10 h-20 rounded-r-md p-2 bg-[#e4e4e41a] shadow-[inset_0_0_8px_#00000078] top-4 -right-4 translate-x-6'>
         <a
-          href={'https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator'}
+          href={github}
           target='_blank'
           rel='noreferrer'
         >
@@ -186,7 +186,7 @@ const ProjectCard = ({
           </div>
         </a>
         <a
-          href={'https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator'}
+          href={link}
           target='_blank'
           rel='noreferrer'
         >

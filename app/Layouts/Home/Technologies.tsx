@@ -1,42 +1,9 @@
-import React from 'react';
-
 import { useEnglishLanguage } from '~/hooks/LanguageContext';
 
-import SASS from 'public/technologies/SASSIcon';
-import TailwindCSSIcon from 'public/technologies/TailwindCSSIcon';
-import JavaScriptIcon from 'public/technologies/JavaScriptIcon';
-import TypeScriptIcon from 'public/technologies/TypeScriptIcon';
-import ReactIcon from 'public/technologies/ReactIcon';
-import NextJSIcon from 'public/technologies/NextJSIcon';
-import RemixIcon from 'public/technologies/RemixIcon';
-import NodeIcon from 'public/technologies/NodeIcon';
-import ExpressIcon from 'public/technologies/ExpressIcon';
-import MongoDBIcon from 'public/technologies/MongoDBIcon';
-import MongooseIcon from 'public/technologies/MongooseIcon';
-import TestingLibraryIcon from 'public/technologies/TestingLibraryIcon';
-import JestIcon from 'public/technologies/JestIcon';
-
-import HeartFace from 'public/Emojis/HeartFace.png';
-
-const technologiesIcons = [
-  SASS,
-  TailwindCSSIcon,
-  JavaScriptIcon,
-  TypeScriptIcon,
-  ReactIcon,
-  NextJSIcon,
-  RemixIcon,
-  NodeIcon,
-  ExpressIcon,
-  MongoDBIcon,
-  MongooseIcon,
-  TestingLibraryIcon,
-  JestIcon
-];
+import { HeartFace } from 'public/Emojis';
+import { technologiesList } from 'public/technologies';
 
 const Technologies = () => {
-  const [iconHover, setIconHover] = React.useState<string>('');
-
   const { isEnglish } = useEnglishLanguage();
 
   return (
@@ -52,34 +19,31 @@ const Technologies = () => {
         </p>
       </h3>
       <div className='flex flex-wrap justify-center gap-6 my-12 p-4 md:p-12'>
-        {technologiesIcons.map((Icon, index) => {
-          let formatName = Icon.name.replace('Icon', '');
-          formatName = formatName.replaceAll('_', ' ');
-
-          return (
-            <div
-              key={index}
-              className={'flex flex-col items-center group gap-3'}
-            >
-              <Icon
-                onMouseOver={() => setIconHover(formatName)}
-                onClick={() => setIconHover(formatName)}
-                onMouseOut={() => setIconHover('')}
-                className='h-16 w-16 drop-shadow-[0_0__2px_rgba(255,255,255,0.8)] group-hover:scale-125 cursor-pointer bg-terciary/40 rounded p-2 transition-transform duration-200'
-              />
-              <span
-                className={`absolute rounded ${
-                  iconHover === formatName ? 'opacity-100' : 'opacity-0'
-                } px-2 py-1 bg-secondary/40 translate-y-20 text-sm text-primary z-20 backdrop-blur-sm text-center`}
-              >
-                {formatName}
-              </span>
-            </div>
-          );
-        })}
+        {technologiesList.map(({ name, Icon }) => (
+          <TechnologyIcon key={name} name={name} Icon={Icon} />
+        ))}
       </div>
     </div>
   );
 };
+
+const TechnologyIcon = ({
+  name,
+  Icon
+}: {
+  name: string;
+  Icon: (props: any) => JSX.Element;
+}) => (
+  <div className={'flex flex-col items-center group gap-3'}>
+    <Icon className='group h-16 w-16 drop-shadow-[0_0__2px_rgba(255,255,255,0.8)] group-hover:scale-125 cursor-pointer bg-terciary/40 rounded p-2 transition-transform duration-200' />
+    <span
+      className={
+        'absolute rounded opacity-0 group-hover:opacity-100 px-2 py-1 bg-secondary/40 translate-y-20 text-sm text-primary z-20 backdrop-blur-sm text-center pointer-events-none'
+      }
+    >
+      {name}
+    </span>
+  </div>
+);
 
 export default Technologies;
