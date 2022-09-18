@@ -25,6 +25,7 @@ const ProjectsSection = ({
         />{' '}
         {isEnglish ? 'Some of my projects!' : 'Alguns dos meus projetos!'}
       </h3>
+
       <ProjectSlider projects={projects} />
     </section>
   );

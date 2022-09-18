@@ -10,31 +10,45 @@ const ProjectSlider = ({ projects }: { projects: Array<projectPropTypes> }) => {
   const [touchStart, setTouchStart] = useState(0);
 
   return (
-    <div
-      className='flex flex-row justify-between items-center w-full h-full px-[0px] sm:px-4 disable-ghost'
-      onTouchStart={(event) => handleTouchStart(event, setTouchStart)}
-      onTouchEnd={(event) => handleTouchEnd(event, touchStart, setOrder)}
-    >
-      <Arrow
-        onClick={() => setOrder(checkOrder(order - 1))}
-        className='w-12 h-12 my-auto translate-y-16 sm:translate-y-0 -order-10 z-50 stroke-primary rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]'
-      />
-      <div className='relative flex flex-row justify-center items-center gap-36'>
-        {projects.map((project, index: number) => (
-          <ProjectCard
+    <>
+      <div className='flex flex-row gap-4 translate-y-48'>
+        {projects.map((_, index) => (
+          <span
             key={index}
-            order={order}
-            index={index}
-            orderLimit={orderLimit}
-            project={project}
-          />
+            className={`block w-3 h-3 rounded-full bg-white ${
+              index === order
+                ? 'opactiy-80 drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]'
+                : 'opacity-10'
+            } transition-[opacity,_filter]`}
+          ></span>
         ))}
       </div>
-      <Arrow
-        onClick={() => setOrder(checkOrder(order + 1))}
-        className='w-12 h-12 my-auto translate-y-16 sm:translate-y-0 order-10 z-50 stroke-primary -rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]'
-      />
-    </div>
+      <div
+        className='flex flex-row justify-center sm:justify-between items-center w-full h-full px-[0px] sm:px-4 disable-ghost'
+        onTouchStart={(event) => handleTouchStart(event, setTouchStart)}
+        onTouchEnd={(event) => handleTouchEnd(event, touchStart, setOrder)}
+      >
+        <Arrow
+          onClick={() => setOrder(checkOrder(order - 1))}
+          className='hidden sm:block w-12 h-12 my-auto translate-y-16 sm:translate-y-0 -order-10 z-50 stroke-primary rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]'
+        />
+        <div className='relative flex flex-row justify-center items-center gap-36'>
+          {projects.map((project, index: number) => (
+            <ProjectCard
+              key={index}
+              order={order}
+              index={index}
+              orderLimit={orderLimit}
+              project={project}
+            />
+          ))}
+        </div>
+        <Arrow
+          onClick={() => setOrder(checkOrder(order + 1))}
+          className='hidden sm:block w-12 h-12 my-auto translate-y-16 sm:translate-y-0 order-10 z-50 stroke-primary -rotate-90 cursor-pointer hover:bg-primary/20 rounded transition-colors drop-shadow-[0_0_3px_rgba(255,255,255,0.8)]'
+        />
+      </div>
+    </>
   );
 };
 
