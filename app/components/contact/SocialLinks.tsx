@@ -57,6 +57,8 @@ const SocialFragment = ({
       className={`group w-48 xl:w-64 flex flex-row items-center justify-center rounded ${
         showLabel && copy ? 'bg-primary/10' : ''
       } hover:bg-primary/10 px-5 py-4 cursor-pointer transition-[background-color] duration-400`}
+      target='_blank'
+      rel='noreferrer'
       href={linkTo}
       onClick={handleCopy}
     >
