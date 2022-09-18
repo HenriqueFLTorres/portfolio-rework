@@ -2,8 +2,7 @@ node_modules
 
 /.cache
 /build
-/public/build
+public/build
 .env
 coverage
 .vscode
-build

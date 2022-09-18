@@ -22,49 +22,26 @@ import {
 } from 'public/technologies';
 import SmallLabel from '../Shared/SmallLabel';
 
-export type ProjectCardProps = {
-  title: string;
-  date: string;
-  shortDescription: string;
-  stackUsed: Array<TechnologyName>;
-  github: string;
-  link: string;
-  images: Array<string>;
-  order: number;
-  index: number;
-  orderLimit: number;
-};
-
-export type TechnologyName =
-  | 'CSS'
-  | 'Express'
-  | 'JavaScript'
-  | 'Jest'
-  | 'MongoDB'
-  | 'Mongoose'
-  | 'NextJS'
-  | 'Node'
-  | 'React'
-  | 'Remix'
-  | 'SASS'
-  | 'TailwindCSS'
-  | 'TestingLibrary'
-  | 'TypeScript';
-
 const ProjectCard = ({
-  title,
-  shortDescription,
-  date,
-  github,
-  images,
   order,
-  link,
-  stackUsed,
   index,
-  orderLimit
+  orderLimit,
+  project
 }: ProjectCardProps) => {
   const [imageRotation, setImageRotation] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
+
+  const {
+    title,
+    date,
+    shortDescription,
+    githubLink,
+    liveLink,
+    technologies,
+    images,
+    link,
+    stackUsed
+  } = project;
 
   const TechnologiesNames = {
     CSS,
@@ -185,7 +162,7 @@ const ProjectCard = ({
         </div>
       </Link>
       <span className='absolute flex flex-col justify-between w-10 h-20 rounded-r-md p-2 bg-[#e4e4e41a] shadow-[inset_0_0_8px_#00000078] top-4 -right-4 translate-x-6'>
-        <a href={github} target='_blank' rel='noreferrer'>
+        <a href={githubLink} target='_blank' rel='noreferrer'>
           <div className='group cursor-pointer'>
             <span className='block absolute w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] will-change-transform duration-200'></span>
             <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform will-change-transform' />
@@ -204,3 +181,38 @@ const ProjectCard = ({
 };
 
 export default ProjectCard;
+
+export type ProjectCardProps = {
+  order: number;
+  index: number;
+  orderLimit: number;
+  project: projectPropTypes;
+};
+
+export type projectPropTypes = {
+  title: string;
+  date: string;
+  shortDescription: string;
+  githubLink: string;
+  liveLink: string;
+  technologies: string;
+  images: string;
+  link: string;
+  stackUsed: TechnologyName[];
+};
+
+export type TechnologyName =
+  | 'CSS'
+  | 'Express'
+  | 'JavaScript'
+  | 'Jest'
+  | 'MongoDB'
+  | 'Mongoose'
+  | 'NextJS'
+  | 'Node'
+  | 'React'
+  | 'Remix'
+  | 'SASS'
+  | 'TailwindCSS'
+  | 'TestingLibrary'
+  | 'TypeScript';

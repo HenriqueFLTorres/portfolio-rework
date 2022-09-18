@@ -6,7 +6,7 @@ const SmallLabel = ({
   additionalStyling?: string;
 }) => (
   <span
-    className={`${additionalStyling} absolute flex justify-center rounded opacity-0 group-hover:opacity-100 px-2 py-1 bg-secondary/40 translate-y-20 group-hover:translate-y-24 text-sm text-primary z-20 backdrop-blur-sm text-center transition-[transform,_opacity] duration-200 pointer-events-none ${beforeElementStyling}`}
+    className={`absolute flex justify-center rounded opacity-0 group-hover:opacity-100 px-2 py-1 bg-secondary/40 translate-y-20 group-hover:translate-y-24 text-sm text-primary z-20 backdrop-blur-sm text-center transition-[transform,_opacity] duration-200 pointer-events-none ${beforeElementStyling} ${additionalStyling}`}
   >
     {title}
   </span>
