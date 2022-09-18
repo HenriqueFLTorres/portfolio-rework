@@ -3,6 +3,8 @@ import { useEnglishLanguage } from '~/hooks/LanguageContext';
 import { HeartFace } from 'public/Emojis';
 import { technologiesList } from 'public/technologies';
 
+import SmallLabel from '~/components/Shared/SmallLabel';
+
 const Technologies = () => {
   const { isEnglish } = useEnglishLanguage();
 
@@ -38,15 +40,8 @@ const TechnologyIcon = ({
 }) => (
   <div className={'flex flex-col items-center group gap-3 w-16 h-16'}>
     <Icon className='absolute origin-center group h-16 w-16 drop-shadow-[0_0__2px_rgba(255,255,255,0.8)] group-hover:h-24 group-hover:w-24 group-hover:translate-y-[-1rem] cursor-pointer bg-terciary/40 rounded p-2 transition-[height,_width,_transform] duration-200' />
-    <span
-      className={`absolute flex justify-center rounded opacity-0 group-hover:opacity-100 px-2 py-1 bg-secondary/40 translate-y-20 group-hover:translate-y-24 text-sm text-primary z-20 backdrop-blur-sm text-center transition-[transform,_opacity] duration-200 pointer-events-none ${beforeElementStyling}`}
-    >
-      {name}
-    </span>
+    <SmallLabel title={name} />
   </div>
 );
 
 export default Technologies;
-
-const beforeElementStyling =
-  'before:absolute before:block before:w-0 before:h-0 before:border-[0_5px_7.9px_5px] before:border-x-transparent before:border-t-transparent before:border-secondary/40 before:top-[-7px]';
