@@ -1,5 +1,5 @@
 import Brain from './Brain.png';
-import BriefCase from './BriefCase.png'
+import BriefCase from './BriefCase.png';
 import BuildingConstruction from './BuildingConstruction.png';
 import CowboyHat from './CowboyHat.png';
 import CrystalBall from './CrystalBall.png';
