@@ -6,6 +6,7 @@ import MongoDBIcon from 'public/technologies/MongoDBIcon';
 import MongooseIcon from 'public/technologies/MongooseIcon';
 import NextJSIcon from 'public/technologies/NextJSIcon';
 import NodeIcon from 'public/technologies/NodeIcon';
+import PrismaIcon from 'public/technologies/PrismaIcon';
 import ReactIcon from 'public/technologies/ReactIcon';
 import RemixIcon from './RemixIcon';
 import SASSIcon from 'public/technologies/SASSIcon';
@@ -22,6 +23,7 @@ const technologiesList = [
   { name: 'Next.js', Icon: NextJSIcon },
   { name: 'Remix', Icon: RemixIcon },
   { name: 'Node.js', Icon: NodeIcon },
+  { name: 'Prisma', Icon: PrismaIcon },
   { name: 'Express.js', Icon: ExpressIcon },
   { name: 'MongoDB', Icon: MongoDBIcon },
   { name: 'Mongoose', Icon: MongooseIcon },

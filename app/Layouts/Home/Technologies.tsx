@@ -29,7 +29,7 @@ const Technologies = () => {
   );
 };
 
-const TechnologyIcon = ({
+export const TechnologyIcon = ({
   name,
   Icon
 }: {

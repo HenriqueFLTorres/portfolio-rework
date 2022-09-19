@@ -13,6 +13,7 @@ import { LanguageContext } from '~/hooks/LanguageContext';
 import type { LoaderFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import LatestArticles from '~/Layouts/Home/LatestArticles';
+import ProfessionalExperience from '~/Layouts/Home/ProfessionalExperience';
 
 const getProjectFromModule = (mod: any) => {
   return { ...mod.attributes };
@@ -39,6 +40,8 @@ export default function Index() {
       <Introduction />
 
       <AboutMe />
+
+      <ProfessionalExperience />
 
       <Technologies />
 

@@ -1,0 +1,15 @@
+[
+  {
+    "company": { "name": "Xaza", "logo": "/images/xaza_logo.png" },
+    "role": "Desenvolvedor Full-Stack",
+    "type": "Tempo integral",
+    "start": "Junho 22",
+    "end": null,
+    "responsibilities": [
+      "Criação e manutenibilidade de uma biblioteca privada de componentes focada em UX e acessibilidade.",
+      "Criação, validação e teste de formulários.",
+      "Reparos no layout de páginas e componentes, garantindo a responsividade em qualquer dispositivo ou orientação."
+    ],
+    "stackUsed": ["React", "TypeScript", "Next.js", "Prisma"]
+  }
+]

@@ -1,4 +1,5 @@
 import Brain from './Brain.png';
+import BriefCase from './BriefCase.png'
 import BuildingConstruction from './BuildingConstruction.png';
 import CowboyHat from './CowboyHat.png';
 import CrystalBall from './CrystalBall.png';
@@ -13,6 +14,7 @@ import WavingHand from './WavingHand.png';
 
 export {
   Brain,
+  BriefCase,
   BuildingConstruction,
   CowboyHat,
   CrystalBall,

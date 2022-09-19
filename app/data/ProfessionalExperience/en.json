@@ -1,0 +1,15 @@
+[
+  {
+    "company": { "name": "Xaza", "logo": "/images/xaza_logo.png" },
+    "role": "Full-Stack Developer",
+    "type": "Full time",
+    "start": "June 22",
+    "end": null,
+    "responsibilities": [
+      "Creation and maintainability of a private library of components focused on UX and accessibility.",
+      "Form creation, validation and test.",
+      "Layout fixes of pages and components, ensuring responsiveness on any device or orientation."
+    ],
+    "stackUsed": ["React", "TypeScript", "Next.js", "Prisma"]
+  }
+]
