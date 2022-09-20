@@ -10,6 +10,6 @@
       "Criação, validação e teste de formulários.",
       "Reparos no layout de páginas e componentes, garantindo a responsividade em qualquer dispositivo ou orientação."
     ],
-    "stackUsed": ["React", "TypeScript", "Next.js", "Prisma"]
+    "stackUsed": ["React", "TypeScript", "Next.js", "React Query", "Prisma"]
   }
 ]

@@ -8,6 +8,7 @@ import NextJSIcon from 'public/technologies/NextJSIcon';
 import NodeIcon from 'public/technologies/NodeIcon';
 import PrismaIcon from 'public/technologies/PrismaIcon';
 import ReactIcon from 'public/technologies/ReactIcon';
+import ReactQueryIcon from 'public/technologies/ReactQueryIcon';
 import RemixIcon from './RemixIcon';
 import SASSIcon from 'public/technologies/SASSIcon';
 import TailwindCSSIcon from 'public/technologies/TailwindCSSIcon';
@@ -24,6 +25,7 @@ const technologiesList = [
   { name: 'Remix', Icon: RemixIcon },
   { name: 'Node.js', Icon: NodeIcon },
   { name: 'Prisma', Icon: PrismaIcon },
+  { name: 'React Query', Icon: ReactQueryIcon },
   { name: 'Express.js', Icon: ExpressIcon },
   { name: 'MongoDB', Icon: MongoDBIcon },
   { name: 'Mongoose', Icon: MongooseIcon },
@@ -41,6 +43,7 @@ export {
   NextJSIcon,
   NodeIcon,
   ReactIcon,
+  ReactQueryIcon,
   RemixIcon,
   SASSIcon,
   TailwindCSSIcon,

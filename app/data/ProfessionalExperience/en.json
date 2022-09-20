@@ -10,6 +10,6 @@
       "Form creation, validation and test.",
       "Layout fixes of pages and components, ensuring responsiveness on any device or orientation."
     ],
-    "stackUsed": ["React", "TypeScript", "Next.js", "Prisma"]
+    "stackUsed": ["React", "TypeScript", "Next.js", "React Query", "Prisma"]
   }
 ]
