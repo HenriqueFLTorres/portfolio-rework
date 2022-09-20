@@ -44,10 +44,13 @@ const ProfessionalExperience = () => {
             key={company.name}
             className='flex flex-col items-center gap-4 max-w-[600px] w-full mx-auto p-4'
           >
-            <span
+            <a
               className={
                 'group w-40 xl:w-52 flex flex-row items-center justify-center rounded bg-neutral-700/20 hover:bg-primary/10 px-4 py-3 mr-auto cursor-pointer transition-[background-color] duration-400 select-none'
               }
+              href='https://www.linkedin.com/company/xaza/'
+              target={'_blank'}
+              rel='noreferrer'
             >
               <img
                 src={company.logo}
@@ -57,7 +60,7 @@ const ProfessionalExperience = () => {
               <p className='text-primary/50 mr-auto group-hover:text-primary xl:text-xl font-semibold transition-[color,_filter] duration-400'>
                 {company.name}
               </p>
-            </span>
+            </a>
             <div className='flex flex-col justify-between w-full h-max bg-neutral-800/50 rounded-lg px-6 py-4 gap-4'>
               <div className='flex flex-col sm:flex-row gap-4 justify-between'>
                 <span className='text-white font-light text-xl'>

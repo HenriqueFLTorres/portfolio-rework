@@ -14,12 +14,19 @@ import {
   Mountain,
   Brain
 } from 'public/Emojis';
+import React from 'react';
+import { technologiesList } from 'public/technologies';
+import SmallLabel from '~/components/Shared/SmallLabel';
 
 type Props = {
   title: string;
   images: Array<string>;
   shortDescription: string;
-  technologies: Array<any>;
+  technologies: Array<
+    (
+      props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
+    ) => JSX.Element
+  >;
   github: string;
   link: string;
   about: string;
@@ -42,8 +49,12 @@ export default function ProjectsPage({
 }: Props) {
   const { isEnglish } = useEnglishLanguage();
 
+  const renderList = technologiesList.filter((technology) =>
+  buildWith.includes(technology.name)
+  );
+
   return (
-    <div className='h-[1800px] relative overflow-hidden'>
+    <div className='min-h-screen h-[1800px] relative overflow-hidden'>
       <div className='absolute flex flex-col items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-50 blur-md'>
         <img src={images[0]} alt='' className='absolute w-full h-auto' />
         <img
@@ -52,18 +63,22 @@ export default function ProjectsPage({
           className='absolute w-full h-auto translate-y-full'
         />
       </div>
-      <img src={RedParticle} alt='' className='absolute left-[-50rem] top-30' />
+      <img
+        src={RedParticle}
+        alt=''
+        className='absolute left-[-50rem] top-30  opacity-70'
+      />
       <img
         src={GreenParticle}
         alt=''
-        className='absolute right-[-12rem] top-0'
+        className='absolute right-[-12rem] top-0  opacity-70'
       />
       <img
         src={PurpleParticle}
         alt=''
-        className='absolute left-[12rem] top-[50rem]'
+        className='absolute left-[12rem] top-[50rem] opacity-70'
       />
-      <main className='relative z-10 pt-20 md:pt-44 w-screen md:w-[800px] mx-auto'>
+      <main className='relative z-10 pt-20 md:pt-44 w-full max-w-[800px] mx-auto md:px-8'>
         <header className='flex flex-col w-screen p-4 md:w-full md:p-0'>
           <div className='flex flex-col md:flex-row items-center mb-8 md:mb-12 gap-6 md:gap-0'>
             <h1 className='text-primary font-bold md:mr-auto text-2xl md:text-3xl'>
@@ -94,25 +109,35 @@ export default function ProjectsPage({
               <p className='text-primary font-light text-sm'>
                 {shortDescription}
               </p>
-              <div className='flex flex-row justify-between md:justify-center gap-6 md:gap-12'>
-                {technologies.map((Tool) => (
-                  <Tool
-                    key={Tool}
-                    className='h-6 mr-auto md:mr-0 md:h-10 drop-shadow-[0_0_4px_#ffffffae]'
-                  />
-                ))}
-                <a href={link} target='_blank' rel='noreferrer'>
-                  <div className='block md:hidden group w-6 cursor-pointer'>
-                    <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
-                    <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
-                  </div>
-                </a>
-                <a href={link} target='_blank' rel='noreferrer'>
-                  <div className='block md:hidden group w-6 cursor-pointer'>
-                    <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
-                    <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
-                  </div>
-                </a>
+              <div className='flex flex-row flex-wrap justify-center md:justify-center gap-6 md:gap-12'>
+                <div className='flex flex-row gap-6 mx-auto'>
+                  {renderList.map(({ Icon, name }) => (
+                    <span
+                      key={name}
+                      className='group relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-md hover:bg-secondary/40 transition-[background-color]'
+                    >
+                      <Icon className='h-6 mr-auto md:mr-0 md:h-10 drop-shadow-[0_0_4px_#ffffffae]' />
+                      <SmallLabel
+                        title={name}
+                        additionalStyling='translate-y-[2.8rem] group-hover:translate-y-[3.5rem]'
+                      />
+                    </span>
+                  ))}
+                </div>
+                <div className='md:hidden flex flex-row gap-6  mx-auto'>
+                  <a href={link} target='_blank' rel='noreferrer'>
+                    <div className='block group w-6 cursor-pointer'>
+                      <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
+                      <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
+                    </div>
+                  </a>
+                  <a href={link} target='_blank' rel='noreferrer'>
+                    <div className='blockgroup w-6 cursor-pointer'>
+                      <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
+                      <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

@@ -53,7 +53,7 @@ const Navbar = ({ animate = false }: { animate?: boolean }) => {
 
   return (
     <nav
-      className={`absolute z-50 xl:flex w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold${
+      className={`z-50 max-w-[1800px] mx-auto xl:flex w-full flex justify-between items-center px-10 py-4 text-secondary font-semibold${
         animate ? ' opacity-0 animate-[reveal_1.5s_ease-out_2s_forwards]' : ''
       }`}
     >
