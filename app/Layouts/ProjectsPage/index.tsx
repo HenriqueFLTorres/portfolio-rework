@@ -50,7 +50,7 @@ export default function ProjectsPage({
   const { isEnglish } = useEnglishLanguage();
 
   const renderList = technologiesList.filter((technology) =>
-  buildWith.includes(technology.name)
+    buildWith.includes(technology.name)
   );
 
   return (
