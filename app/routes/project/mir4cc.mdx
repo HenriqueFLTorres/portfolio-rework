@@ -2,6 +2,7 @@
 title: Mir4 Crafting Calculator
 githubLink: https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator
 liveLink: https://mir4cc.netlify.app/
+link: '/project/mir4cc'
 date: 03/08/22
 shortDescription: 'Um website criado para ajudar os jogadores de Mir4CC a calcularem os seus crafts'
 technologies: ['CSS', 'React']
@@ -22,23 +23,15 @@ import ReactIcon from 'public/technologies/ReactIcon';
 import CSSIcon from 'public/technologies/CSS';
 
 <ProjectPage
-  title='Mir4 Crafting Calculator'
-  images={[
-    'https://i.imgur.com/kFUrjL9.png',
-    'https://i.imgur.com/uUD0vMH.png',
-    'https://i.imgur.com/39rweQj.png',
-    'https://i.imgur.com/c8044SE.png',
-    'https://i.imgur.com/ab4ywBl.png',
-    'https://i.imgur.com/wTrHRWG.png'
-  ]}
-  shortDescription={
-    'Um website criado para ajudar os jogadores de Mir4CC a calcularem os seus crafts'
-  }
-  technologies={['React', 'CSS']}
+  title={attributes.title}
+  images={attributes.image}
+  shortDescription={attributes.shortDescription}
+  technologies={attributes.technologies}
   about='Mir4CC é um website para ajudar os jogadores a calcularem a receita de items em diversas quantidades, o site disponibiliza ferramentas como inventário para ajudar a calcular receitas levando em conta os items adicionados lá.'
   buildWith='O website foi desenvolvido em React e seus hooks (useContext, useEffect), CSS puro e algumas libraries como Minify para simplificar grandes números.'
   challenges='Para possibilitar a implementação de diversas features para melhorar a experiência do usuário, foi necessário realizar o gerenciamento de estados e a comunicação de componentes para deixar o website dinâmico, embora eu não houvesse um grande conhecimento em React, a persistência e busca por conhecimento foi essencial para chegar onde estou hoje!'
   learned='O projeto foi fundamental para aprender sobre o gerenciamento de estados, diversos hooks do React e estilização usando o CSS puro'
-  github={'https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator'}
-  link={'https://mir4cc.netlify.app/'}
+  github={attributes.githubLink}
+  link={attributes.liveLink}
+  link={attributes.link}
 />

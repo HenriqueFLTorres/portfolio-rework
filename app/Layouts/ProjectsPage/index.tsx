@@ -63,7 +63,7 @@ export default function ProjectsPage({
           className='absolute w-full h-auto translate-y-full'
         />
       </div>
-      <img
+      {/* <img
         src={RedParticle}
         alt=''
         className='absolute left-[-50rem] top-30  opacity-70'
@@ -77,7 +77,7 @@ export default function ProjectsPage({
         src={PurpleParticle}
         alt=''
         className='absolute left-[12rem] top-[50rem] opacity-70'
-      />
+      /> */}
       <main className='relative z-10 pt-20 md:pt-44 w-full max-w-[800px] mx-auto md:px-8'>
         <header className='flex flex-col w-screen p-4 md:w-full md:p-0'>
           <div className='flex flex-col md:flex-row items-center mb-8 md:mb-12 gap-6 md:gap-0'>

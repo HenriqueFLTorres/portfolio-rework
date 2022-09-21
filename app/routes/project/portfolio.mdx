@@ -1,0 +1,36 @@
+---
+title: Personal Portfolio
+githubLink: https://github.com/HenriqueFLTorres/portfolio-rework
+liveLink: https://htportfolio.vercel.app
+link: '/project/portfolio'
+date: 00/00/00
+shortDescription: 'Um projeto de design moderno e bem estruturado para reunir todas as minhas informações.'
+technologies: ['React', 'Remix', 'TailwindCSS']
+images:
+  [
+    'https://i.imgur.com/i2L1zNd.png',
+    'https://i.imgur.com/ntnoIe0.png',
+    'https://i.imgur.com/89RF9FM.png',
+    'https://i.imgur.com/Q4AzUXX.png',
+    'https://i.imgur.com/zRUx21A.png',
+  ]
+---
+
+import ProjectPage from 'app/Layouts/ProjectsPage';
+
+import { ReactIcon, RemixIcon, TailwindCSSIcon } from 'public/technologies';
+
+<ProjectPage
+  title={attributes.title}
+  images={attributes.images}
+  shortDescription={attributes.shortDescription
+  }
+  technologies={attributes.technologies}
+  about='Um website com o propósito de reunir todo meu progresso durante minha carreira, com design elegante e código atualizado ele reflete minha maneira de contruir um software com excelência.'
+  buildWith='Desenvolvido com React, minha principal e mais amada biblioteca de trabalho, é também acompanhado com Remix e TailwindCSS, ambos tecnologias atuais que estão me despertanto interesse pelo seus propósitos.'
+  challenges='Para criar um website que me represente não basta apenas um bom design e features interessantes, feito com diversas convenções atuais da área de desenvolvimento de software, o projeto levou meses de estudo e aprendizado para chegar em seu estado impecável.'
+  learned='Com uma forte presença do TailwindCSS e Remix, ele foi fundamental para a familiarização com essas tecnologias que, juntamente das diversas implementações de convenções atuais, contribuiram para o meu crescimento como engenheiro de software.'
+  github={attributes.githubLink}
+  liveLink={attributes.liveLink}
+  link={attributes.link}
+/>

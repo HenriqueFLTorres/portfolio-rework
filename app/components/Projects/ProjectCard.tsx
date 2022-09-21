@@ -97,6 +97,9 @@ const ProjectCard = ({
     }
   });
 
+  console.log(link);
+  
+
   return (
     <div
       className={`absolute w-64 h-max bg-neutral-700/70 rounded ${getPositionStyle(
@@ -109,7 +112,7 @@ const ProjectCard = ({
         setImageRotation(0);
       }}
     >
-      <Link to='/project/mir4cc' target={'_blank'}>
+      <Link to={link ?? '/project/mir4'} target={'_blank'}>
         <div className='w-full h-full p-2 cursor-pointer'>
           <div
             className={
@@ -168,7 +171,7 @@ const ProjectCard = ({
             <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform will-change-transform' />
           </div>
         </a>
-        <a href={link} target='_blank' rel='noreferrer'>
+        <a href={liveLink} target='_blank' rel='noreferrer'>
           <div className='group cursor-pointer'>
             <span className='block top-12 absolute w-6 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] will-change-transform duration-200'></span>
             <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform will-change-transform' />
