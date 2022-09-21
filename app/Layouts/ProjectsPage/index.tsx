@@ -116,7 +116,7 @@ export default function ProjectsPage({
                       key={name}
                       className='group relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 rounded-md hover:bg-secondary/40 transition-[background-color]'
                     >
-                      <Icon className='h-6 mr-auto md:mr-0 md:h-10 drop-shadow-[0_0_4px_#ffffffae]' />
+                      <Icon className='h-6 md:mr-0 md:h-10 drop-shadow-[0_0_4px_#ffffffae]' />
                       <SmallLabel
                         title={name}
                         additionalStyling='translate-y-[2.8rem] group-hover:translate-y-[3.5rem]'

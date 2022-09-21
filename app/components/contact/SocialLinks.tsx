@@ -16,7 +16,7 @@ const SocialLinks = () => {
   return (
     <div
       id='contact'
-      className='flex flex-col w-max mx-auto gap-6 mt-48 mb-36 xl:mb-52'
+      className='flex flex-col w-max mx-auto gap-6 mt-48 mb-20 xl:mb-36'
     >
       {socialLinksIcons.map((link) => (
         <SocialFragment
