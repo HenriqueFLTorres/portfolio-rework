@@ -1,4 +1,4 @@
-import type { LinksFunction, MetaFunction } from '@remix-run/node';
+import type { MetaFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
@@ -16,6 +16,7 @@ export function links() {
       type: 'svg',
       href: 'favicon.svg'
     },
+    { rel: 'icon', href: '/favicon.svg' },
     { rel: 'stylesheet', href: styles }
   ];
 }

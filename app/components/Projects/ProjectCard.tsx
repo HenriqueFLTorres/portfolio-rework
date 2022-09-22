@@ -98,7 +98,6 @@ const ProjectCard = ({
   });
 
   console.log(link);
-  
 
   return (
     <div

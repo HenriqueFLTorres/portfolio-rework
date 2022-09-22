@@ -9,6 +9,7 @@ import SocialLinks from '~/components/Contact/SocialLinks';
 
 import * as mir4 from '~/routes/project/mir4cc.mdx';
 import * as portfolio from '~/routes/project/portfolio.mdx';
+import * as ezcommerce from '~/routes/project/ezcommerce.mdx';
 
 import { LanguageContext } from '~/hooks/LanguageContext';
 import type { LoaderFunction } from '@remix-run/node';
@@ -22,6 +23,9 @@ const getProjectFromModule = (mod: any) => {
 
 export const loader: LoaderFunction = async () => {
   return [
+    getProjectFromModule(mir4),
+    getProjectFromModule(ezcommerce),
+    getProjectFromModule(mir4),
     getProjectFromModule(mir4),
     getProjectFromModule(portfolio),
   ];

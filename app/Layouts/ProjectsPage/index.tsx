@@ -55,10 +55,10 @@ export default function ProjectsPage({
 
   return (
     <div className='min-h-screen h-[1800px] relative overflow-hidden'>
-      <div className='absolute flex flex-col items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-50 blur-md'>
+      <div className='absolute flex flex-col items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-20 blur-lg select-none'>
         <img src={images[0]} alt='' className='absolute w-full h-auto' />
         <img
-          src={images[0]}
+          src={images[1]}
           alt=''
           className='absolute w-full h-auto translate-y-full'
         />
