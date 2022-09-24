@@ -9,7 +9,28 @@ module.exports = {
         terciary: '#181818'
       },
       fontFamily: {
-        OpenSans: ['"Open Sans"', 'sans serif']
+        default: [
+          '-apple-system',
+          'system-ui',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Fira Sans',
+          'Ubuntu',
+          'Oxygen',
+          'Oxygen Sans',
+          'Cantarell',
+          'Droid Sans',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Lucida Grande',
+          'Helvetica',
+          'Arial',
+          'sans-serif'
+        ]
       },
       animation: {
         bounceAndLight:

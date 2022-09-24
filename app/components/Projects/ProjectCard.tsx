@@ -97,8 +97,6 @@ const ProjectCard = ({
     }
   });
 
-  console.log(link);
-
   return (
     <div
       className={`absolute w-64 h-max bg-neutral-700/70 rounded ${getPositionStyle(

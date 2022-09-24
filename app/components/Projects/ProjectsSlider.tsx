@@ -77,7 +77,6 @@ const handleTouchEnd = (
   setOrder: Dispatch<React.SetStateAction<number>>
 ) => {
   const clientX = event?.changedTouches[0]?.clientX;
-  console.log(clientX, touchStart);
 
   if (clientX === touchStart) return;
   if (clientX < touchStart) return setOrder((prev) => checkOrder(prev - 1));

@@ -27,7 +27,7 @@ export const loader: LoaderFunction = async () => {
     getProjectFromModule(ezcommerce),
     getProjectFromModule(mir4),
     getProjectFromModule(mir4),
-    getProjectFromModule(portfolio),
+    getProjectFromModule(portfolio)
   ];
 };
 

@@ -41,7 +41,7 @@ const ArticleFragment = ({
       </div>
       <div className='flex flex-col justify-between pt-2 px-3 h-1/2 '>
         <header className='flex flex-row justify-between items-center w-full'>
-          <h4 className='font-medium text-sm text-primary'>{title}</h4>
+          <h4 className='font-bold text-sm text-primary'>{title}</h4>
         </header>
         <p className='font-light text-xs text-secondary py-1 pb-3'>
           {description}

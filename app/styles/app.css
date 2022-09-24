@@ -1565,8 +1565,8 @@ video {
   text-align: center;
 }
 
-.font-OpenSans {
-  font-family: "Open Sans", sans serif;
+.font-default {
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI;
 }
 
 .text-2xl {
@@ -1657,6 +1657,11 @@ video {
 .underline {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .opacity-100 {
