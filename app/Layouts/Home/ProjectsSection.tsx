@@ -1,7 +1,7 @@
-import { useEnglishLanguage } from '~/hooks/LanguageContext';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
 
-import type { projectPropTypes } from '~/components/Projects/ProjectCard';
-import ProjectSlider from '~/components/Projects/ProjectsSlider';
+import type { projectPropTypes } from '@components/Projects/ProjectCard';
+import ProjectSlider from '@components/Projects/ProjectsSlider';
 
 import { Desktop } from 'public/Emojis';
 

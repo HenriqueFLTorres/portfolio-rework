@@ -1,6 +1,6 @@
-import { useEnglishLanguage } from '~/hooks/LanguageContext';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
 
-import ArticleFragment from '~/components/Shared/ArticleFragment';
+import ArticleFragment from '@components/Shared/ArticleFragment';
 import { OpenBook } from 'public/Emojis';
 
 const LatestArticles = () => {

@@ -13,10 +13,14 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./app/*"]
+      "@data/*": ["app/data/*"],
+      "@components/*": ["app/components/*"],
+      "@hooks/*": ["app/hooks/*"],
+      "@content/*": ["app/content/*"],
+      "@routes/*": ["app/routes/*"],
+      "@layouts/*": ["app/layouts/*"],
+      "@utils/*": ["app/utils/*"]
     },
-
-    // Remix takes care of building everything in `remix build`.
     "noEmit": true
   }
 }

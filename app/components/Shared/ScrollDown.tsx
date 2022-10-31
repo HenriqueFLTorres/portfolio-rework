@@ -1,6 +1,6 @@
 import Arrow from 'public/Icons/Arrow';
 
-import { useEnglishLanguage } from '~/hooks/LanguageContext';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
 
 const ScrollDown = () => {
   const { isEnglish } = useEnglishLanguage();

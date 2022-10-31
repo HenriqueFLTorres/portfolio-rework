@@ -1,4 +1,4 @@
-import { useEnglishLanguage } from '~/hooks/LanguageContext';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
 
 import {
   WavingHand,

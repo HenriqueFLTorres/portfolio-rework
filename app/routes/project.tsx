@@ -1,8 +1,8 @@
 import { Outlet } from '@remix-run/react';
-import { LanguageContext } from '~/hooks/LanguageContext';
+import { LanguageContext } from '@hooks/LanguageContext';
 
-import Background from '~/components/Shared/Background';
-import Navbar from '~/components/Shared/Navbar';
+import Background from '@components/Shared/Background';
+import Navbar from '@components/Shared/Navbar';
 
 export default function Project() {
   return (

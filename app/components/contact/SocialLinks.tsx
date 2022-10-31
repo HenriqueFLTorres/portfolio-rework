@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
+
+import SmallLabel from '@components/Shared/SmallLabel';
 import {
   LinkedIn,
   GitHub,
@@ -7,8 +11,6 @@ import {
   StackOverflow,
   LeetCode
 } from 'public/SocialLinks';
-import { useState } from 'react';
-import SmallLabel from '../Shared/SmallLabel';
 
 const SocialLinks = () => {
   const [showLabel, setShowLabel] = useState(false);
@@ -41,6 +43,8 @@ const SocialFragment = ({
 }) => {
   const { name, copy, linkTo, Component } = link;
 
+  const { isEnglish } = useEnglishLanguage();
+
   const handleCopy = () => {
     if (!copy) return;
 
@@ -68,7 +72,7 @@ const SocialFragment = ({
       </p>
       {copy && (
         <SmallLabel
-          title='Copiado'
+          title={isEnglish ? 'Copied' : 'Copiado'}
           additionalStyling={`translate-y-14 group-hover:translate-y-14 ${
             showLabel
               ? 'opacity-100 group-hover:opacity-100'

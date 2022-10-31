@@ -4,8 +4,8 @@ declare module '*.png' {
 }
 
 declare module '*.mdx' {
-  const value: any;
-  export default value;
+  import { MDXProps } from 'mdx/types';
+  export default function MDXContent(props: MDXProps): JSX.Element;
 }
 
 declare module '*.css' {

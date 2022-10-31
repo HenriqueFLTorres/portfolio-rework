@@ -1,9 +1,9 @@
-import { useEnglishLanguage } from '~/hooks/LanguageContext';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
 
 import { HeartFace } from 'public/Emojis';
 import { technologiesList } from 'public/technologies';
 
-import SmallLabel from '~/components/Shared/SmallLabel';
+import SmallLabel from '@components/Shared/SmallLabel';
 
 const Technologies = () => {
   const { isEnglish } = useEnglishLanguage();

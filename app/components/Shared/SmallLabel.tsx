@@ -15,4 +15,4 @@ const SmallLabel = ({
 export default SmallLabel;
 
 const beforeElementStyling =
-  'before:absolute before:block before:w-0 before:h-0 before:border-[0_5px_7.9px_5px] before:border-x-transparent before:border-t-transparent before:border-secondary/40 before:top-[-7px]';
+  'before:absolute before:block before:w-0 before:h-0 before:border-[0_5px_7.9px_5px] before:border-x-transparent before:border-t-transparent before:border-secondary/40 before:bottom-full';

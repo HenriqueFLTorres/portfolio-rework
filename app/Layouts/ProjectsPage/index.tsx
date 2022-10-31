@@ -1,9 +1,4 @@
-import ProjectCarrousel from 'app/components/Shared/ProjectCarrousel';
-import { useEnglishLanguage } from '~/hooks/LanguageContext';
-
-import GreenParticle from 'public/SVG/GreenParticle.png';
-import RedParticle from 'public/SVG/RedParticle.png';
-import PurpleParticle from 'public/SVG/PurpleParticle.png';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
 
 import GitHub from 'public/SocialLinks/GitHub';
 import LinkIcon from 'public/Icons/Link';
@@ -16,7 +11,9 @@ import {
 } from 'public/Emojis';
 import React from 'react';
 import { technologiesList } from 'public/technologies';
-import SmallLabel from '~/components/Shared/SmallLabel';
+
+import SmallLabel from '@components/Shared/SmallLabel';
+import ProjectCarrousel from '@components/Shared/ProjectCarrousel';
 
 type Props = {
   title: string;

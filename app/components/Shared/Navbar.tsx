@@ -1,4 +1,4 @@
-import { useEnglishLanguage } from '~/hooks/LanguageContext';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
 
 import Logo from 'public/Icons/Logo';
 

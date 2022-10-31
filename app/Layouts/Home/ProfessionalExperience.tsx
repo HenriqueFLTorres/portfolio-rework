@@ -1,11 +1,11 @@
-import { useEnglishLanguage } from '~/hooks/LanguageContext';
+import { useEnglishLanguage } from '@hooks/LanguageContext';
 
 import { BriefCase } from 'public/Emojis';
 
-import portugueseList from '~/data/ProfessionalExperience/pt.json';
-import englishList from '~/data/ProfessionalExperience/en.json';
+import portugueseList from '@data/ProfessionalExperience/pt.json';
+import englishList from '@data/ProfessionalExperience/en.json';
 
-import SmallLabel from '~/components/Shared/SmallLabel';
+import SmallLabel from '@components/Shared/SmallLabel';
 import { technologiesList } from 'public/technologies';
 
 const ProfessionalExperience = () => {
