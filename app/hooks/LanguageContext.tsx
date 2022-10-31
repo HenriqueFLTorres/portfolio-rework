@@ -28,7 +28,7 @@ export const LanguageContext: React.FC<React.ReactNode> = ({ children }) => {
     if ('isEnglishLanguage' in localStorage)
       return setIsEnglishLanguage(languageStorage === 'true' ? true : false);
 
-    return localStorage.setItem('isEnglishLanguage', 'true')
+    return localStorage.setItem('isEnglishLanguage', 'true');
   }, []);
 
   useEffect(() => {
