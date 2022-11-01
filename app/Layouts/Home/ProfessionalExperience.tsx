@@ -18,7 +18,7 @@ const ProfessionalExperience = () => {
 
   return (
     <section
-      id='projects'
+      id='experience'
       className='relative w-full mx-auto max-w-[1200px] small:w-4/5 small:px-0 mb-72'
     >
       <h3 className='flex flex-col items-center gap-4 md:gap-0 md:flex-row xl:h-52 justify-center font-bold text-center md:text-left text-4xl xl:text-5xl mb-20 text-primary mt-36 p-4'>

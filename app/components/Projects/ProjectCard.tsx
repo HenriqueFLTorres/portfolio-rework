@@ -43,42 +43,6 @@ const ProjectCard = ({
     stackUsed
   } = project;
 
-  const TechnologiesNames = {
-    CSS,
-    Express: ExpressIcon,
-    JavaScript: JavaScriptIcon,
-    Jest: JestIcon,
-    MongoDB: MongoDBIcon,
-    Mongoose: MongooseIcon,
-    NextJS: NextJSIcon,
-    Node: NodeIcon,
-    React: ReactIcon,
-    Remix: RemixIcon,
-    SASS: SASSIcon,
-    TailwindCSS: TailwindCSSIcon,
-    TestingLibrary: TestingLibraryIcon,
-    TypeScript: TypeScriptIcon
-  };
-
-  // get style accoarding to the position of the carrousel
-  const getPositionStyle = (cardPosition: number) => {
-    if (cardPosition === order) return 'center';
-
-    if (
-      cardPosition === order + 1 ||
-      (cardPosition === 0 && order === orderLimit)
-    )
-      return 'left';
-
-    if (
-      cardPosition === order - 1 ||
-      (order === 0 && cardPosition === orderLimit)
-    )
-      return 'right';
-
-    return '-translate-y-16 z-0 opacity-0 transition-[background-color,_transform,_opacity] duration-[400ms]';
-  };
-
   const verifyRotation = (rotation: number) => {
     if (rotation > images.length - 1) return 0;
     else return rotation;
@@ -97,17 +61,24 @@ const ProjectCard = ({
     }
   });
 
+  const onMouseOver = () => setIsHovering(true);
+
+  const onMouseEnter = () =>
+    setImageRotation((prev) => verifyRotation(prev + 1));
+
+  const onMouseLeave = () => {
+    setIsHovering(false);
+    setImageRotation(0);
+  };
+
   return (
     <div
       className={`absolute w-64 h-max bg-neutral-700/70 rounded ${getPositionStyle(
-        index
+        { cardPosition: index, order, orderLimit }
       )} hover:bg-neutral-600/70 z-20`}
-      onMouseOver={() => setIsHovering(true)}
-      onMouseEnter={() => setImageRotation((prev) => verifyRotation(prev + 1))}
-      onMouseLeave={() => {
-        setIsHovering(false);
-        setImageRotation(0);
-      }}
+      onMouseOver={onMouseOver}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       <Link to={link ?? '/project/mir4'} target={'_blank'}>
         <div className='w-full h-full p-2 cursor-pointer'>
@@ -216,3 +187,47 @@ export type TechnologyName =
   | 'TailwindCSS'
   | 'TestingLibrary'
   | 'TypeScript';
+
+// get style accoarding to the position of the carrousel
+const getPositionStyle = ({
+  cardPosition,
+  order,
+  orderLimit
+}: {
+  cardPosition: number;
+  order: number;
+  orderLimit: number;
+}) => {
+  if (cardPosition === order) return 'center';
+
+  if (
+    cardPosition === order + 1 ||
+    (cardPosition === 0 && order === orderLimit)
+  )
+    return 'left';
+
+  if (
+    cardPosition === order - 1 ||
+    (order === 0 && cardPosition === orderLimit)
+  )
+    return 'right';
+
+  return '-translate-y-16 z-0 opacity-0 transition-[background-color,_transform,_opacity] duration-[400ms] pointer-events-none';
+};
+
+const TechnologiesNames = {
+  CSS,
+  Express: ExpressIcon,
+  JavaScript: JavaScriptIcon,
+  Jest: JestIcon,
+  MongoDB: MongoDBIcon,
+  Mongoose: MongooseIcon,
+  NextJS: NextJSIcon,
+  Node: NodeIcon,
+  React: ReactIcon,
+  Remix: RemixIcon,
+  SASS: SASSIcon,
+  TailwindCSS: TailwindCSSIcon,
+  TestingLibrary: TestingLibraryIcon,
+  TypeScript: TypeScriptIcon
+};

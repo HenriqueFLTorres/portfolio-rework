@@ -13,7 +13,7 @@ const MongooseIcon = (
       style={{
         letterSpacing: -3,
         fontSize: '46.7236px',
-        fontFamily: "'Helvetica'",
+        fontFamily: 'Helvetica',
         fill: '#e1e1e1'
       }}
     >
