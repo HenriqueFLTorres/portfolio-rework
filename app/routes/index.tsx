@@ -10,6 +10,7 @@ import SocialLinks from '@components/Contact/SocialLinks';
 import * as mir4 from '@routes/project/mir4cc.mdx';
 import * as portfolio from '@routes/project/portfolio.mdx';
 import * as ezcommerce from '@routes/project/ezcommerce.mdx';
+import * as simplifiedKnowledge from '@routes/project/simplified-knowledge.mdx';
 
 import Introduction from '@layouts/Home/Introduction';
 import AboutMe from '@layouts/Home/AboutMe';
@@ -26,7 +27,7 @@ export const loader: LoaderFunction = async () => {
   return [
     getProjectFromModule(mir4),
     getProjectFromModule(ezcommerce),
-    getProjectFromModule(mir4),
+    getProjectFromModule(simplifiedKnowledge),
     getProjectFromModule(mir4),
     getProjectFromModule(portfolio)
   ];

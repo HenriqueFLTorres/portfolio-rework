@@ -45,8 +45,8 @@ const AboutMe = () => {
         </h3>
         <p className='font-light text-base text-center md:text-left xl:text-lg p-6'>
           {isEnglish
-            ? 'I want to financially stabilize myself and my family, providing them with a safer and healthier place. I will also expand my knowledge of software engineering, computer security, ethical hacking, and design with a dream to become a modern world polymath!'
-            : 'Quero estabilizar financeiramente a família e a mim, proporcionando a eles um lugar mais seguro e saudável. Também expandirei meu conhecimento de engenharia de software, segurança de computadores, hacking ético e design com um sonho de me tornar um polímata do mundo moderno!'}
+            ? 'Studying programming made me extremely curious about every other topic of technology. And since I started, I developed the habit of deeply learning every day, which eventually will turn me into a polymath from the modern world.'
+            : 'Estudar programação me deixou extremamente curioso sobre todos os outros tópicos de tecnologia. E desde que comecei, desenvolvi o hábito de aprender profundamente todos os dias, o que eventualmente me transformará em um polímata do mundo moderno.'}
         </p>
       </div>
       <div className='flex flex-col xl:w-1/2 text-primary font-display text-2xl my-auto xl:mt-32 xl:px-8 mt-12'>

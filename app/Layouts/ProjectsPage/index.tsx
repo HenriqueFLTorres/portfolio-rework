@@ -17,13 +17,9 @@ import ProjectCarrousel from '@components/Shared/ProjectCarrousel';
 
 type Props = {
   title: string;
-  images: Array<string>;
+  images: string[];
   shortDescription: string;
-  technologies: Array<
-    (
-      props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>
-    ) => JSX.Element
-  >;
+  technologies: string[];
   github: string;
   link: string;
   about: string;
@@ -47,11 +43,11 @@ export default function ProjectsPage({
   const { isEnglish } = useEnglishLanguage();
 
   const renderList = technologiesList.filter((technology) =>
-    buildWith.includes(technology.name)
+    technologies.includes(technology.name)
   );
 
   return (
-    <div className='min-h-screen h-[1800px] relative overflow-hidden'>
+    <div className='min-h-screen h-[1800px] relative overflow-hidden -top-20'>
       <div className='absolute flex flex-col items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-20 blur-lg select-none'>
         <img src={images[0]} alt='' className='absolute w-full h-auto' />
         <img
@@ -60,21 +56,6 @@ export default function ProjectsPage({
           className='absolute w-full h-auto translate-y-full'
         />
       </div>
-      {/* <img
-        src={RedParticle}
-        alt=''
-        className='absolute left-[-50rem] top-30  opacity-70'
-      />
-      <img
-        src={GreenParticle}
-        alt=''
-        className='absolute right-[-12rem] top-0  opacity-70'
-      />
-      <img
-        src={PurpleParticle}
-        alt=''
-        className='absolute left-[12rem] top-[50rem] opacity-70'
-      /> */}
       <main className='relative z-10 pt-20 md:pt-44 w-full max-w-[800px] mx-auto md:px-8'>
         <header className='flex flex-col w-screen p-4 md:w-full md:p-0'>
           <div className='flex flex-col md:flex-row items-center mb-8 md:mb-12 gap-6 md:gap-0'>
