@@ -17,7 +17,7 @@ import TypeScriptIcon from 'public/technologies/TypeScriptIcon';
 
 const technologiesList = [
   { name: 'SCSS/SASS', Icon: SASSIcon },
-  { name: 'TailwindCSS', Icon: TailwindCSSIcon },
+  { name: 'Tailwind CSS', Icon: TailwindCSSIcon },
   { name: 'JavaScript', Icon: JavaScriptIcon },
   { name: 'TypeScript', Icon: TypeScriptIcon },
   { name: 'React', Icon: ReactIcon },

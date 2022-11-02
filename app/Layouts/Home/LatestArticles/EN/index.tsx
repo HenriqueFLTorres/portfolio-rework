@@ -28,7 +28,7 @@ const EnglishArticles = () => (
       title={'Big O notations and algorithms'}
       date={'10 26 2022'}
       description={
-        'Do you know what\'s an algorithm and what it\'s power? They are used by many companies and are much common than we think'
+        "Do you know what's an algorithm and what it's power? They are used by many companies and are much common than we think"
       }
       image={
         'https://images.unsplash.com/photo-1509048191080-d2984bad6ae5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80'
