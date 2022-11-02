@@ -26,23 +26,23 @@ const ProjectCarrousel = ({ images }: Props) => {
       />
       {images.map((image, index) => {
         return (
-            <div
-              key={image}
-              className={
-                `absolute w-3/5 md:w-[600px] h-[200px] md:h-[350px] rounded-xl select-none ${position === index ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300`
-              }
-            >
-              <img
-                src={image}
-                alt=''
-                className='absolute w-full h-full blur-[3px] md:blur-[8px] rounded'
-              />
-              <img
-                src={image}
-                alt=''
-                className='absolute w-full h-full object-contain rounded'
-              />
-            </div>     
+          <div
+            key={image}
+            className={`absolute w-3/5 md:w-[600px] h-[200px] md:h-[350px] rounded-xl select-none ${
+              position === index ? 'opacity-100' : 'opacity-0'
+            } transition-opacity duration-300`}
+          >
+            <img
+              src={image}
+              alt=''
+              className='absolute w-full h-full blur-[3px] md:blur-[8px] rounded'
+            />
+            <img
+              src={image}
+              alt=''
+              className='absolute w-full h-full object-contain rounded'
+            />
+          </div>
         );
       })}
       <Arrow

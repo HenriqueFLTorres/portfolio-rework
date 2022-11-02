@@ -1,26 +1,27 @@
-import { Link } from '@remix-run/react';
-
 type ArticleFragmentProps = {
   title: string;
   description: string;
   date: string;
   image: string;
+  link: string;
 };
 
 const ArticleFragment = ({
   title,
   description,
   date,
-  image
+  image,
+  link
 }: ArticleFragmentProps) => (
-  <Link
-    to='/project/mir4cc'
+  <a
+    href={link}
     target={'_blank'}
+    rel={'noopener noreferrer'}
     className={'w-full max-w-[300px]'}
   >
     <div
       className={
-        'group relative h-max bg-neutral-700/70 rounded-tl-2xl rounded-br-2xl border-2 border-white/10 hover:border-[#E7BC19] hover:bg-neutral-900 z-20 transition-colors'
+        'group relative h-[280px] bg-neutral-700/70 rounded-tl-2xl rounded-br-2xl border-2 border-white/10 hover:border-[#E7BC19] hover:bg-neutral-900 z-20 transition-colors'
       }
     >
       <span
@@ -30,26 +31,26 @@ const ArticleFragment = ({
       ></span>
       <div
         className={
-          'flex clip-path items-center justify-center relative h-[130px] max-h-[130px] rounded-tl-2xl bg-neutral-900 text-2xl text-primary'
+          'relative flex items-center justify-center h-1/2 rounded-full clip-path bg-neutral-900 text-2xl text-primary'
         }
       >
         <img
           src={image}
           alt=''
-          className='relative article-image-mask z-10 object-contain h-full'
+          className='relative z-10 article-image-mask object-cover w-full h-full'
         />
       </div>
-      <div className='flex flex-col justify-between pt-2 px-3 h-1/2 '>
+      <div className='flex flex-col justify-between py-2 px-3 h-1/2 gap-1'>
         <header className='flex flex-row justify-between items-center w-full'>
           <h4 className='font-bold text-sm text-primary'>{title}</h4>
         </header>
-        <p className='font-light text-xs text-secondary py-1 pb-3'>
+        <p className='h-auto font-light text-xs text-secondary article-text-overflow text-ellipsis overflow-hidden mb-auto'>
           {description}
         </p>
-        <p className='font-light text-xs text-secondary pb-2 mr-auto'>{date}</p>
+        <p className='font-light text-xs text-secondary mr-auto'>{date}</p>
       </div>
     </div>
-  </Link>
+  </a>
 );
 
 export default ArticleFragment;

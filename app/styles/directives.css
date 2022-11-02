@@ -36,6 +36,12 @@
     -webkit-border-radius: 1rem 0 0 0;
   }
 
+  .article-text-overflow {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
   * {
     scrollbar-width: thin;
     scrollbar-color: #e4e4e4 #181818;
