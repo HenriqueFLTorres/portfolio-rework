@@ -17,7 +17,7 @@ import AboutMe from '@layouts/home/AboutMe';
 import Technologies from '@layouts/home/Technologies';
 import ProjectsSection from '@layouts/home/ProjectsSection';
 import LatestArticles from '@layouts/home/LatestArticles';
-import ProfessionalExperience from '@layouts/home/Professionalexperience';
+import ProfessionalExperience from '@layouts/home/ProfessionalExperience';
 
 const getProjectFromModule = (mod: MDXModule) => {
   return { ...(mod as any).attributes };
