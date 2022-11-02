@@ -4,20 +4,20 @@ import { useLoaderData } from '@remix-run/react';
 import Background from '@components/Shared/Background';
 import { MDXModule } from 'mdx/types';
 
-import Navbar from 'app/components/Shared/Navbar';
-import SocialLinks from 'app/components/Contact/SocialLinks';
+import Navbar from '@components/Shared/Navbar';
+import SocialLinks from '@components/Contact/SocialLinks';
 
-import * as mir4 from 'app/routes/project/mir4cc.mdx';
-import * as portfolio from 'app/routes/project/portfolio.mdx';
-import * as ezcommerce from 'app/routes/project/ezcommerce.mdx';
-import * as simplifiedKnowledge from 'app/routes/project/simplified-knowledge.mdx';
+import * as mir4 from '@routes/project/mir4cc.mdx';
+import * as portfolio from '@routes/project/portfolio.mdx';
+import * as ezcommerce from '@routes/project/ezcommerce.mdx';
+import * as simplifiedKnowledge from '@routes/project/simplified-knowledge.mdx';
 
-import Introduction from 'app/layouts/Home/Introduction';
-import AboutMe from 'app/layouts/Home/AboutMe';
-import Technologies from 'app/layouts/Home/Technologies';
-import ProjectsSection from 'app/layouts/Home/ProjectsSection';
-import LatestArticles from 'app/layouts/Home/LatestArticles';
-import ProfessionalExperience from 'app/layouts/Home/ProfessionalExperience';
+import Introduction from '@layouts/home/Introduction';
+import AboutMe from '@layouts/home/AboutMe';
+import Technologies from '@layouts/home/Technologies';
+import ProjectsSection from '@layouts/home/ProjectsSection';
+import LatestArticles from '@layouts/home/LatestArticles';
+import ProfessionalExperience from '@layouts/home/Professionalexperience';
 
 const getProjectFromModule = (mod: MDXModule) => {
   return { ...(mod as any).attributes };

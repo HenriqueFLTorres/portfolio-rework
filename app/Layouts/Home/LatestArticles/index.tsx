@@ -1,7 +1,7 @@
 import { useEnglishLanguage } from '@hooks/LanguageContext';
 
-import EnglishArticles from '@layouts/Home/LatestArticles/EN';
-import PortugueseArticles from '@layouts/Home/LatestArticles/PT';
+import EnglishArticles from '@layouts/home/LatestArticles/EN';
+import PortugueseArticles from '@layouts/home/LatestArticles/PT';
 
 import { OpenBook } from 'public/Emojis';
 
