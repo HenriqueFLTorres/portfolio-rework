@@ -9,8 +9,8 @@ const ProjectsSection = ({
   projects: { PT, EN }
 }: {
   projects: {
-    PT: Array<projectPropTypes>
-    EN: Array<projectPropTypes>
+    PT: Array<projectPropTypes>;
+    EN: Array<projectPropTypes>;
   };
 }) => {
   const { isEnglish } = useEnglishLanguage();
