@@ -80,7 +80,7 @@ const ProjectCard = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      <Link to={link ?? '/project/mir4'} target={'_blank'}>
+      <Link to={link ?? '/project/mir4'}>
         <div className='w-full h-full p-2 cursor-pointer'>
           <div
             className={

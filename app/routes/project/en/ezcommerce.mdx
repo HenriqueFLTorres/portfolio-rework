@@ -1,0 +1,35 @@
+---
+title: Ez Commerce
+githubLink: https://github.com/HenriqueFLTorres/EzEcommerce-FakeWebsite
+liveLink: https://ezecommerce.vercel.app/
+link: '/project/en/ezcommerce'
+date: 03/29/22
+shortDescription: 'A dummy E-Commerce to exercise state and filter management.'
+technologies: ['React', 'Next.js']
+images: 
+  [
+  'https://i.imgur.com/w6txGeD.png',
+  'https://i.imgur.com/UKmxlS4.png',
+  'https://i.imgur.com/17ODvzt.png',
+  'https://i.imgur.com/81JNzle.png',
+  'https://i.imgur.com/06R0qfi.png'
+  ]
+---
+
+import ProjectPage from 'app/Layouts/ProjectsPage';
+
+import { ReactIcon, RemixIcon, TailwindCSSIcon } from 'public/technologies';
+
+<ProjectPage
+  title={attributes.title}
+  images={attributes.images}
+  shortDescription={attributes.shortDescription}
+  technologies={attributes.technologies}
+  about='A project designed to practice and learn more about Next.js mechanics and React state management'
+  buildWith='In this project, was used Next.js for dynamic routes and advanced React hooks for managing information between components'
+  challenges='Without a doubt, the two biggest challenges were filtering products by price, rating and department, and creating the cart, which keeps the user`s order information.'
+  learned='Using Next.js, I was able to get more familiar with its components and route system. Therefore, the use of advanced hooks such as React`s useContext() was essential for my learning.'
+  github={attributes.githubLink}
+  liveLink={attributes.liveLink}
+  link={attributes.link}
+/>

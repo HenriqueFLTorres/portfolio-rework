@@ -1,0 +1,35 @@
+---
+title: Mir4 Crafting Calculator
+githubLink: https://github.com/HenriqueFLTorres/Mir4-CraftingCalculator
+liveLink: https://mir4cc.netlify.app/
+link: '/project/en/mir4cc'
+date: 08/03/22
+shortDescription: 'A website created to help Mir4CC players calculate their crafts'
+technologies: ['React']
+images:
+  [
+    'https://i.imgur.com/kFUrjL9.png',
+    'https://i.imgur.com/uUD0vMH.png',
+    'https://i.imgur.com/39rweQj.png',
+    'https://i.imgur.com/c8044SE.png',
+    'https://i.imgur.com/ab4ywBl.png',
+    'https://i.imgur.com/wTrHRWG.png'
+  ]
+---
+
+import ProjectPage from 'app/Layouts/ProjectsPage';
+import ReactIcon from 'public/technologies/ReactIcon';
+
+<ProjectPage
+  title={attributes.title}
+  images={attributes.images}
+  shortDescription={attributes.shortDescription}
+  technologies={attributes.technologies}
+  about='Mir4CC is a website to help players calculate the cost of items in various quantities, the website provides tools such as inventory to help calculate the cost taking into account items added there.'
+  buildWith='The website was developed in React and its hooks (useContext, useEffect), pure CSS and some libraries like Minify to simplify big numbers.'
+  challenges='To enable the implementation of several features to improve the user experience, it was necessary to perform state management and component communication to make the website dynamic, although I didn`t have great knowledge in React, persistence and search for knowledge was essential to get where I am today!'
+  learned='The project was instrumental in learning about state management, various React hooks and styling using pure CSS'
+  github={attributes.githubLink}
+  link={attributes.liveLink}
+  link={attributes.link}
+/>

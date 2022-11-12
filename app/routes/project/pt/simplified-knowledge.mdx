@@ -1,0 +1,34 @@
+---
+title: Simplified Knowledge Blog
+githubLink: https://github.com/HenriqueFLTorres/simplified-knowledge
+liveLink: https://simplifiedknowledge.vercel.app/
+link: '/project/pt/simplified-knowledge'
+date: 26/05/22
+shortDescription: 'Meu blog onde uso para reunir conteúdos que estudo e quero reforçar'
+technologies: ['React', 'Remix', 'TailwindCSS']
+images:
+  [
+    'https://i.imgur.com/evrgeyf.png',
+    'https://i.imgur.com/xRQnowH.png',
+    'https://i.imgur.com/85LymqD.png',
+    'https://i.imgur.com/ypzrvsl.png'
+  ]
+---
+
+import ProjectPage from 'app/Layouts/ProjectsPage';
+
+import { ReactIcon, RemixIcon, TailwindCSSIcon } from 'public/technologies';
+
+<ProjectPage
+  title={attributes.title}
+  images={attributes.images}
+  shortDescription={attributes.shortDescription}
+  technologies={attributes.technologies}
+  about='Um website para armazenar todo meu conhecimento, instrumento essencial para meu desenvolvimento como programador.'
+  buildWith='Desenvolvido com Remix, uma framework similar ao Next.js, pude me desfrutar de seus poderosos recursos e aprender mais sobre.'
+  challenges='A arquitetura de fato foi primordial e desafiadora para  desenhar um website que futuramente serveria como wikipedia de conhecimentos'
+  learned='Me desafiando a fazer novas features nunca antes desenvolvidas, pude aprender um pouco mais sobre funcionalidades e capacidades que o React e Remix têm a oferecer.'
+  github={attributes.githubLink}
+  liveLink={attributes.liveLink}
+  link={attributes.link}
+/>

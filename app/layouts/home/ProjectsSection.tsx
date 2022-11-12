@@ -6,9 +6,12 @@ import ProjectSlider from '@components/Projects/ProjectsSlider';
 import { Desktop } from 'public/Emojis';
 
 const ProjectsSection = ({
-  projects
+  projects: { PT, EN }
 }: {
-  projects: Array<projectPropTypes>;
+  projects: {
+    PT: Array<projectPropTypes>
+    EN: Array<projectPropTypes>
+  };
 }) => {
   const { isEnglish } = useEnglishLanguage();
 
@@ -26,7 +29,7 @@ const ProjectsSection = ({
         {isEnglish ? 'Some of my projects!' : 'Alguns dos meus projetos!'}
       </h3>
 
-      <ProjectSlider projects={projects} />
+      <ProjectSlider projects={isEnglish ? EN : PT} />
     </section>
   );
 };

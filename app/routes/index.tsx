@@ -7,10 +7,15 @@ import { MDXModule } from 'mdx/types';
 import Navbar from '@components/Shared/Navbar';
 import SocialLinks from '@components/Contact/SocialLinks';
 
-import * as mir4 from '@routes/project/mir4cc.mdx';
-import * as portfolio from '@routes/project/portfolio.mdx';
-import * as ezcommerce from '@routes/project/ezcommerce.mdx';
-import * as simplifiedKnowledge from '@routes/project/simplified-knowledge.mdx';
+import * as mir4 from '@routes/project/en/mir4cc.mdx';
+import * as portfolio from '@routes/project/en/portfolio.mdx';
+import * as ezcommerce from '@routes/project/en/ezcommerce.mdx';
+import * as simplifiedKnowledge from '@routes/project/en/simplified-knowledge.mdx';
+
+import * as mir4PT from '@routes/project/pt/mir4cc.mdx';
+import * as portfolioPT from '@routes/project/pt/portfolio.mdx';
+import * as ezcommercePT from '@routes/project/pt/ezcommerce.mdx';
+import * as simplifiedKnowledgePT from '@routes/project/pt/simplified-knowledge.mdx';
 
 import Introduction from '@layouts/home/Introduction';
 import AboutMe from '@layouts/home/AboutMe';
@@ -23,14 +28,27 @@ const getProjectFromModule = (mod: MDXModule) => {
   return { ...(mod as any).attributes };
 };
 
+const englishProjects = [
+  getProjectFromModule(mir4),
+  getProjectFromModule(ezcommerce),
+  getProjectFromModule(simplifiedKnowledge),
+  getProjectFromModule(mir4),
+  getProjectFromModule(portfolio)
+];
+
+const portugueseProjects = [
+  getProjectFromModule(mir4PT),
+  getProjectFromModule(ezcommercePT),
+  getProjectFromModule(simplifiedKnowledgePT),
+  getProjectFromModule(mir4PT),
+  getProjectFromModule(portfolioPT)
+];
+
 export const loader: LoaderFunction = async () => {
-  return [
-    getProjectFromModule(mir4),
-    getProjectFromModule(ezcommerce),
-    getProjectFromModule(simplifiedKnowledge),
-    getProjectFromModule(mir4),
-    getProjectFromModule(portfolio)
-  ];
+  return {
+    PT: portugueseProjects,
+    EN: englishProjects
+  };
 };
 
 export default function Index() {
