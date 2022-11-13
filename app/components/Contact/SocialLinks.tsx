@@ -73,7 +73,7 @@ const SocialFragment = ({
       {copy && (
         <SmallLabel
           title={isEnglish ? 'Copied' : 'Copiado'}
-          additionalStyling={`translate-y-14 group-hover:translate-y-14 ${
+          additionalStyling={`translate-y-[3.8rem] group-hover:translate-y-[4.2rem] ${
             showLabel
               ? 'opacity-100 group-hover:opacity-100'
               : 'opacity-0 group-hover:opacity-0'

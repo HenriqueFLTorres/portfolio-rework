@@ -47,7 +47,7 @@ export default function ProjectsPage({
   );
 
   return (
-    <div className='min-h-screen h-[1800px] relative overflow-hidden -top-20'>
+    <div className='min-h-screen h-[1800px] overflow-hidden -top-20'>
       <div className='absolute flex flex-col items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-20 blur-lg select-none'>
         <img src={images[0]} alt='' className='absolute w-full h-auto' />
         <img
@@ -56,23 +56,29 @@ export default function ProjectsPage({
           className='absolute w-full h-auto translate-y-full'
         />
       </div>
-      <main className='relative z-10 pt-20 md:pt-44 w-full max-w-[800px] mx-auto md:px-8'>
+      <main className='relative pt-20 md:pt-44 w-full max-w-[800px] mx-auto md:px-8'>
         <header className='flex flex-col w-screen p-4 md:w-full md:p-0'>
           <div className='flex flex-col md:flex-row items-center mb-8 md:mb-12 gap-6 md:gap-0'>
             <h1 className='text-primary font-bold md:mr-auto text-2xl md:text-3xl'>
               {title}
             </h1>
-            <a href={github} target='_blank' rel='noreferrer'>
-              <div className='hidden md:block group w-8 h-8 cursor-pointer'>
-                <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
-                <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
-              </div>
+            <a
+              href={github}
+              target='_blank'
+              rel='noreferrer'
+              className='hidden md:block group w-8 h-8 cursor-pointer'
+            >
+              <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
+              <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
             </a>
-            <a href={link} target='_blank' rel='noreferrer'>
-              <div className='hidden md:block group w-8 cursor-pointer ml-8'>
-                <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
-                <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
-              </div>
+            <a
+              href={link}
+              target='_blank'
+              rel='noreferrer'
+              className='hidden md:block group w-8 cursor-pointer ml-8'
+            >
+              <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
+              <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
             </a>
           </div>
           <div className='flex flex-col w-full md:w-auto md:flex-row gap-10 md:gap-20'>

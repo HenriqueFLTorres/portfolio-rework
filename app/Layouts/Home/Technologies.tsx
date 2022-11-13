@@ -40,7 +40,7 @@ export const TechnologyIcon = ({
 }) => (
   <div className={'flex flex-col items-center group gap-3 w-16 h-16'}>
     <Icon className='absolute origin-center group h-16 w-16 drop-shadow-[0_0__2px_rgba(255,255,255,0.8)] group-hover:h-24 group-hover:w-24 group-hover:translate-y-[-1rem] cursor-pointer bg-terciary/40 rounded p-2 transition-[height,_width,_transform] duration-200' />
-    <SmallLabel title={name} />
+    <SmallLabel title={name} additionalStyling="translate-y-20 group-hover:translate-y-24" />
   </div>
 );
 
