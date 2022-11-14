@@ -27,7 +27,7 @@ export type DescriptionProps = {
   date: string;
   shortDescription: string;
   stackUsed: TechnologyNameTypes[];
-}
+};
 
 export type TechnologyNameTypes =
   | 'CSS'

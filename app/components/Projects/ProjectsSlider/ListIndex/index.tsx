@@ -1,6 +1,12 @@
 import { projectPropTypes } from '@components/Projects/ProjectCard/ProjectCard';
 
-const SliderListIndex = ({ projects, order }: { projects: projectPropTypes[], order: number }) => (
+const SliderListIndex = ({
+  projects,
+  order
+}: {
+  projects: projectPropTypes[];
+  order: number;
+}) => (
   <div className='flex flex-row gap-4 translate-y-48'>
     {projects.map((_, index) => (
       <span

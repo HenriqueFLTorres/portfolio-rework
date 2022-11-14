@@ -16,7 +16,10 @@ import {
 } from 'public/technologies';
 import SmallLabel from '@components/Shared/SmallLabel';
 
-import { DescriptionProps, TechnologyNameTypes } from '@components/Projects/ProjectCard/ProjectCard';
+import {
+  DescriptionProps,
+  TechnologyNameTypes
+} from '@components/Projects/ProjectCard/ProjectCard';
 
 const ProjectDescription = ({
   title,

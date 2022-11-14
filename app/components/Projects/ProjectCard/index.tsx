@@ -14,10 +14,7 @@ const ProjectCard = ({
   const [imageRotation, setImageRotation] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
 
-  const {
-    images,
-    link
-  } = project;
+  const { images, link } = project;
 
   const verifyRotation = (rotation: number) => {
     if (rotation > images.length - 1) return 0;

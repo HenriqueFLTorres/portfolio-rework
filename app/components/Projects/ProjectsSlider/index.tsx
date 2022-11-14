@@ -61,6 +61,5 @@ const orderLimit = list.length - 1;
 const checkOrder = (givenNumber: number) => {
   if (givenNumber < 0) return orderLimit;
   else if (givenNumber > orderLimit) return 0;
-
   else return givenNumber;
 };
