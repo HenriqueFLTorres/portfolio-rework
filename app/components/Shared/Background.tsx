@@ -19,7 +19,7 @@ const Background = (props: any) => {
   });
 
   return (
-    <div className='fixed bg-terciary w-screen h-full overflow-hidden clip-path -z-10 transform-gpu'>
+    <div className='fixed bg-terciary background-noise back w-screen h-full overflow-hidden clip-path -z-10 transform-gpu'>
       <img
         src={CircleParticle}
         alt=''

@@ -10,8 +10,8 @@
 <h3 align="center">Designed and developed by Henrique Torres</h3>
 
 <br/><br/>
-  <br/><br/><br/>
-  
+<br/><br/><br/>
+
   <p align="center">
     <img width="40%" src="https://i.imgur.com/Q4AzUXX.png">
     <img width="40%" src="https://i.imgur.com/i2L1zNd.png">

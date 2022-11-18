@@ -61,6 +61,12 @@
     border: 3px solid #181818;
   }
 
+  .background-noise {
+    background-position: 0px 0px;
+    background-image: url('/images/BackgroundNoise.png');
+    background-size: 200px 200px;
+  }
+
   @media (min-width: 1200px) {
     .right,
     .left {
