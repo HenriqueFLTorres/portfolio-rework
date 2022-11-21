@@ -3,15 +3,15 @@ import ArticleFragment from '@components/Shared/ArticleFragment';
 const PortugueseArticles = () => (
   <>
     <ArticleFragment
-      title={'Referência e Valor: Por que você deve saber a diferença'}
-      date={'25 5 2022'}
+      title={'Aumentando a legibilidade do código'}
+      date={'11 20 2022'}
       description={
-        'Alguns tipos de dados no JavaScript têm comportamento diferente quando copiados e comparados entre si. Este post apresenta esses tipos de dados e como isso afeta nosso programa'
+        'Neste artigo, mostrarei meus métodos para tornar meu código JavaScript e React mais legível.'
       }
       image={
-        'https://images.unsplash.com/photo-1512998844734-cd2cca565822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=721&q=80'
+        'https://images.unsplash.com/photo-1619409437363-1b1d6e539836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80'
       }
-      link={'https://simplifiedknowledge.vercel.app/blog/referencia-vs-valor'}
+      link={'https://simplifiedknowledge.vercel.app/blog/aumentando-legibilidade-do-codigo'}
     ></ArticleFragment>
     <ArticleFragment
       title={'Middlewares no Express: Tudo que você precisa saber!'}

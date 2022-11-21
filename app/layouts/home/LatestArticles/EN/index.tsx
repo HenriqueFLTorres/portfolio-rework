@@ -3,15 +3,15 @@ import ArticleFragment from '@components/Shared/ArticleFragment';
 const EnglishArticles = () => (
   <>
     <ArticleFragment
-      title={'Reference and Value: Why you should know the difference'}
-      date={'5 25 2022'}
+      title={'Boosting Code Readability'}
+      date={'11 20 2022'}
       description={
-        'Some data types in JavaScript have different behavior when copied and compared with each other. This post introduces these data types and how this affects our program'
+        'In this article, I will show you my methods to make my JavaScript and React code more readable.'
       }
       image={
-        'https://images.unsplash.com/photo-1512998844734-cd2cca565822?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=721&q=80'
+        'https://images.unsplash.com/photo-1619409437363-1b1d6e539836?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80'
       }
-      link={'https://simplifiedknowledge.vercel.app/blog/reference-vs-value'}
+      link={'https://simplifiedknowledge.vercel.app/blog/boost-code-readability'}
     ></ArticleFragment>
     <ArticleFragment
       title={'Express Middlewares: Everything you need to know!'}
