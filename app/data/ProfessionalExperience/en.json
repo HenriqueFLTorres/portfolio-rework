@@ -1,15 +1,43 @@
 [
   {
-    "company": { "name": "Xaza", "logo": "/images/xaza_logo.png" },
+    "company": {
+      "name": "Xaza",
+      "logo": "/images/xaza_logo.png",
+      "href": "https://www.linkedin.com/company/xaza/"
+    },
     "role": "Full-Stack Developer",
     "type": "Full time",
     "start": "June 22",
-    "end": null,
+    "end": "Dec 9",
     "responsibilities": [
       "Creation and maintainability of a private library of components focused on UX and accessibility.",
       "Form creation, validation and test.",
       "Layout fixes of pages and components, ensuring responsiveness on any device or orientation."
     ],
     "stackUsed": ["React", "TypeScript", "Next.js", "React Query", "Prisma"]
+  },
+  {
+    "company": {
+      "name": "Bask Health",
+      "logo": "/images/bask_logo.png",
+      "href": "https://www.linkedin.com/company/bask-health/"
+    },
+    "role": "Full-Stack Developer",
+    "type": "Full time",
+    "start": "Dec 12",
+    "end": "June 9",
+    "responsibilities": [
+      "Maintenance and improvement of the code structure.",
+      "Implementation and testing of new tools for the product.",
+      "Review and changes to the formality of a private library focused on UI/UX."
+    ],
+    "stackUsed": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Next.js",
+      "React Query",
+      "Prisma"
+    ]
   }
 ]
