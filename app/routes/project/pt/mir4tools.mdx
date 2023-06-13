@@ -1,0 +1,33 @@
+---
+title: Mir4 Tools
+githubLink: null
+liveLink: https://www.mir4tools.com/
+link: '/project/en/mir4tools'
+date: 06/11/22
+shortDescription: 'Um site com várias ferramentas disponíveis gratuitamente'
+technologies: ['React', 'Next.js', 'Tailwind CSS']
+images:
+  [
+    'https://i.imgur.com/lapORCk.jpg',
+    'https://i.imgur.com/ODLKjIr.jpg',
+    'https://i.imgur.com/9EzE8um.jpg',
+    'https://i.imgur.com/1OUzx9H.png',
+  ]
+---
+
+import ProjectPage from 'app/Layouts/ProjectsPage';
+import ReactIcon from 'public/technologies/ReactIcon';
+
+<ProjectPage
+  title={attributes.title}
+  images={attributes.images}
+  shortDescription={attributes.shortDescription}
+  technologies={attributes.technologies}
+  about='Uma ferramenta de software disponível gratuitamente criada de jogadores para jogadores com o intuito de disseminar informações e revolucionar as estratégias dos jogadores.'
+  buildWith='Usando as convenções mais recentes para SEO, acessibilidade e desempenho, o mir4tools é um aplicativo altamente voltado para o cliente criado com Next.js, React e TailwindCSS.'
+  challenges='Como acontece com todo SASS, o mir4tools precisa ser mantido, revisado e testado semanalmente para garantir sua qualidade em termos de estilo de jogo da comunidade mir4.'
+  learned='Aproveitando as técnicas mais avançadas de SEO e acessibilidade, o site tem 100% de pontuação de farol graças ao seu planejamento e construção com base em empresas de alto nível.'
+  github={attributes.githubLink}
+  liveLink={attributes.liveLink}
+  link={attributes.link}
+/>

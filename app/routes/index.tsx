@@ -11,11 +11,13 @@ import * as mir4 from '@routes/project/en/mir4cc.mdx';
 import * as portfolio from '@routes/project/en/portfolio.mdx';
 import * as ezcommerce from '@routes/project/en/ezcommerce.mdx';
 import * as simplifiedKnowledge from '@routes/project/en/simplified-knowledge.mdx';
+import * as mir4tools from '@routes/project/en/mir4tools.mdx';
 
 import * as mir4PT from '@routes/project/pt/mir4cc.mdx';
 import * as portfolioPT from '@routes/project/pt/portfolio.mdx';
 import * as ezcommercePT from '@routes/project/pt/ezcommerce.mdx';
 import * as simplifiedKnowledgePT from '@routes/project/pt/simplified-knowledge.mdx';
+import * as mir4toolsPT from '@routes/project/pt/mir4tools.mdx';
 
 import Introduction from '@layouts/home/Introduction';
 import AboutMe from '@layouts/home/AboutMe';
@@ -29,18 +31,18 @@ const getProjectFromModule = (mod: MDXModule) => {
 };
 
 const englishProjects = [
+  getProjectFromModule(mir4tools),
   getProjectFromModule(mir4),
   getProjectFromModule(ezcommerce),
   getProjectFromModule(simplifiedKnowledge),
-  getProjectFromModule(mir4),
   getProjectFromModule(portfolio)
 ];
 
 const portugueseProjects = [
+  getProjectFromModule(mir4toolsPT),
   getProjectFromModule(mir4PT),
   getProjectFromModule(ezcommercePT),
   getProjectFromModule(simplifiedKnowledgePT),
-  getProjectFromModule(mir4PT),
   getProjectFromModule(portfolioPT)
 ];
 

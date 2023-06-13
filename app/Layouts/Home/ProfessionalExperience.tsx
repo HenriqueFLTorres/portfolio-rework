@@ -86,7 +86,10 @@ const ProfessionalExperience = () => {
                 <span className='text-white font-light text-xl'>
                   <h3 className='font-semibold'>{role}</h3>
                   <h5 className='text-secondary'>
-                    <Link to={company.href} target='_blank'>{company.name}</Link> · {type}
+                    <Link to={company.href} target='_blank'>
+                      {company.name}
+                    </Link>{' '}
+                    · {type}
                   </h5>
                 </span>
                 <p className='text-secondary font-light text-lg'>
@@ -125,7 +128,7 @@ const ProfessionalExperience = () => {
 export default ProfessionalExperience;
 
 interface experienceType {
-  company: { name: string; logo: string, href: string };
+  company: { name: string; logo: string; href: string };
   role: string;
   type: string;
   start: string;

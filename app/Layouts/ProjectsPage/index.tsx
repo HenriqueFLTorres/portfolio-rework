@@ -1,19 +1,18 @@
 import { useEnglishLanguage } from '@hooks/LanguageContext';
 
-import GitHub from 'public/SocialLinks/GitHub';
 import LinkIcon from 'public/Icons/Link';
+import GitHub from 'public/SocialLinks/GitHub';
 
 import {
-  HandWriting,
+  Brain,
   BuildingConstruction,
-  Mountain,
-  Brain
+  HandWriting,
+  Mountain
 } from 'public/Emojis';
-import React from 'react';
 import { technologiesList } from 'public/technologies';
 
-import SmallLabel from '@components/Shared/SmallLabel';
 import ProjectCarrousel from '@components/Shared/ProjectCarrousel';
+import SmallLabel from '@components/Shared/SmallLabel';
 
 type Props = {
   title: string;
@@ -21,6 +20,7 @@ type Props = {
   shortDescription: string;
   technologies: string[];
   github: string;
+  liveLink: string;
   link: string;
   about: string;
   buildWith: string;
@@ -34,7 +34,7 @@ export default function ProjectsPage({
   shortDescription,
   technologies,
   github,
-  link,
+  liveLink,
   about,
   buildWith,
   challenges,
@@ -47,8 +47,8 @@ export default function ProjectsPage({
   );
 
   return (
-    <div className='min-h-screen h-[1800px] overflow-hidden -top-20'>
-      <div className='absolute flex flex-col items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-20 blur-lg select-none'>
+    <div className='min-h-screen h-[1800px] -top-20'>
+      <div className='absolute flex flex-col overflow-hidden items-center w-[1920px] 2xl:w-screen h-auto -z-10 opacity-20 blur-lg select-none'>
         <img src={images[0]} alt='' className='absolute w-full h-auto' />
         <img
           src={images[1]}
@@ -62,17 +62,21 @@ export default function ProjectsPage({
             <h1 className='text-primary font-bold md:mr-auto text-2xl md:text-3xl'>
               {title}
             </h1>
+            {github ? (
+              <a
+                href={github}
+                target='_blank'
+                rel='noreferrer'
+                className='hidden md:block group w-8 h-8 cursor-pointer'
+              >
+                <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
+                <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
+              </a>
+            ) : (
+              <></>
+            )}
             <a
-              href={github}
-              target='_blank'
-              rel='noreferrer'
-              className='hidden md:block group w-8 h-8 cursor-pointer'
-            >
-              <span className='absolute block w-8 h-8 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
-              <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
-            </a>
-            <a
-              href={link}
+              href={liveLink}
               target='_blank'
               rel='noreferrer'
               className='hidden md:block group w-8 cursor-pointer ml-8'
@@ -109,13 +113,17 @@ export default function ProjectsPage({
                   ))}
                 </div>
                 <div className='md:hidden flex flex-row gap-6  mx-auto'>
-                  <a href={link} target='_blank' rel='noreferrer'>
-                    <div className='block group w-6 cursor-pointer'>
-                      <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
-                      <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
-                    </div>
-                  </a>
-                  <a href={link} target='_blank' rel='noreferrer'>
+                  {github ? (
+                    <a href={github} target='_blank' rel='noreferrer'>
+                      <div className='block group w-6 cursor-pointer'>
+                        <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
+                        <GitHub className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
+                      </div>
+                    </a>
+                  ) : (
+                    <></>
+                  )}
+                  <a href={liveLink} target='_blank' rel='noreferrer'>
                     <div className='blockgroup w-6 cursor-pointer'>
                       <span className='absolute block w-6 h-6 bg-primary/60 group-hover:bg-primary rounded-full rotate-45 blur-lg group-hover:-translate-y-1 group-hover:scale-110 transition-[background-color,_transform] duration-200'></span>
                       <LinkIcon className='fill-primary group-hover:-translate-y-1 group-hover:scale-110 transition-transform' />
