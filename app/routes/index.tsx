@@ -19,12 +19,12 @@ import * as mir4toolsPT from '@routes/project/pt/mir4tools.mdx';
 import * as portfolioPT from '@routes/project/pt/portfolio.mdx';
 import * as simplifiedKnowledgePT from '@routes/project/pt/simplified-knowledge.mdx';
 
-import AboutMe from '@layouts/Home/AboutMe';
-import Introduction from '@layouts/Home/Introduction';
-import LatestArticles from '@layouts/Home/LatestArticles';
-import ProfessionalExperience from '@layouts/Home/ProfessionalExperience';
-import ProjectsSection from '@layouts/Home/ProjectsSection';
-import Technologies from '@layouts/Home/Technologies';
+import AboutMe from '@layouts/home/AboutMe';
+import Introduction from '@layouts/home/Introduction';
+import LatestArticles from '@layouts/home/LatestArticles';
+import ProfessionalExperience from '@layouts/home/ProfessionalExperience';
+import ProjectsSection from '@layouts/home/ProjectsSection';
+import Technologies from '@layouts/home/Technologies';
 import { Analytics } from '@vercel/analytics/react';
 
 const getProjectFromModule = (mod: MDXModule) => {
