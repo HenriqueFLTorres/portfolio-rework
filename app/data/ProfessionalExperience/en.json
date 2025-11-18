@@ -14,7 +14,14 @@
       "Form creation, validation and test.",
       "Layout fixes of pages and components, ensuring responsiveness on any device or orientation."
     ],
-    "stackUsed": ["React", "TypeScript", "Next.js", "React Query", "Prisma"]
+    "stackUsed": [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "React Query",
+      "Prisma",
+      "MongoDB"
+    ]
   },
   {
     "company": {
@@ -38,6 +45,31 @@
       "Next.js",
       "React Query",
       "Prisma"
+    ]
+  },
+  {
+    "company": {
+      "name": "Rings AI",
+      "logo": "/images/rings_ai_logo.jpg",
+      "href": "https://www.linkedin.com/company/rings-ai/"
+    },
+    "role": "Full-Stack Engineer",
+    "type": "Full time",
+    "start": "Dec 12",
+    "end": "Today",
+    "responsibilities": [
+      "Rewrote the front-end repository using type-safe, scalable, and flexible technologies",
+      "Developed comprehensive unit and end-to-end tests for core functionalities and UI components",
+      "Led the development and maintenance of front-end and back-end features, ensuring reliability and alignment with product requirements"
+    ],
+    "stackUsed": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Next.js",
+      "React Query",
+      "Python",
+      "React Testing Library"
     ]
   }
 ]
