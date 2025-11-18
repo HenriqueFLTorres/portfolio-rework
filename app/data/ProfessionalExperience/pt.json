@@ -7,8 +7,8 @@
     },
     "role": "Desenvolvedor Full-Stack",
     "type": "Tempo integral",
-    "start": "Junho 22",
-    "end": "Dez 9",
+    "start": "Junho 2022",
+    "end": "Dez 2022",
     "responsibilities": [
       "Criação e manutenibilidade de uma biblioteca privada de componentes focada em UX e acessibilidade.",
       "Criação, validação e teste de formulários.",
@@ -24,8 +24,8 @@
     },
     "role": "Desenvolvedor Full-Stack",
     "type": "Tempo integral",
-    "start": "Dez 12",
-    "end": "Junho 9",
+    "start": "Dez 2022",
+    "end": "Junho 2023",
     "responsibilities": [
       "Manutenção e aprimoramento da estrutura de código.",
       "Implementação e teste de novas ferramentas ao produto.",
@@ -38,6 +38,31 @@
       "Next.js",
       "React Query",
       "Prisma"
+    ]
+  },
+  {
+    "company": {
+      "name": "Rings AI",
+      "logo": "/images/rings_ai_logo.jpg",
+      "href": "https://www.linkedin.com/company/rings-ai/"
+    },
+    "role": "Full-Stack Engineer",
+    "type": "Full time",
+    "start": "Mar 2024",
+    "end": "Hoje",
+    "responsibilities": [
+      "Reescrevi o repositório de front-end usando tecnologias tipadas, escaláveis ​​e flexíveis",
+      "Desenvolvi testes unitários e de ponta a ponta abrangentes para funcionalidades principais e componentes da interface do usuário",
+      "Liderei o desenvolvimento e a manutenção de recursos de front-end e back-end, garantindo confiabilidade e alinhamento com os requisitos do produto"
+    ],
+    "stackUsed": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Next.js",
+      "React Query",
+      "Python",
+      "React Testing Library"
     ]
   }
 ]

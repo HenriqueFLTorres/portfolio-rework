@@ -50,7 +50,7 @@ const ProfessionalExperience = () => {
             <img
               src={company.logo}
               alt=''
-              className='h-6 w-6 mr-4 inline group-first:invert'
+              className='h-6 w-6 mr-4 inline rounded-md group-first:invert'
             />
             <p className='mr-auto xl:text-xl font-semibold transition-[color,_filter] duration-400'>
               {company.name}
